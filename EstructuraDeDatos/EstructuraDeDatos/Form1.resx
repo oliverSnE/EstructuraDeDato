@@ -120,4 +120,32 @@
   <metadata name="msMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAOEAAADhAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAmXeID7iPomu3jp+VuJGioriRoqK3jp+VtY+ga5l3iA8AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAACqgJkevpeosNSwvunqy9T/8tXc//LV3P/y1dz/8tXc/+rL1P/UsL3pvZior6SA
+        khwAAAAAAAAAAAAAAAAAAAAAwZury/HU2//y1dz/8tXc//LV3P/y1dz/8tXc//LV3P/y1dz/8tXc//HT
+        2//Bm6rKAAAAAAAAAAAAAAAAAAAAAM2quODy1dz/8tXc//LV3P/y1dz/8tXc//LV3P/y1dz/8tXc//LV
+        3P/y1dz/zaq44AAAAAAAAAAAAAAAAAAAAADNqrjg6cnS/9Kvvf/Tr73/1LG+/9Kvvf/Sr73/1LG+/9Ov
+        vf/Sr73/6cvT/82quOAAAAAAAAAAAAAAAAAAAAAAvpep6tCtuv/w09r/v8jh/7vH4v+iweT/scTj/7bF
+        4v+pw+P/8NPa/9OwvP/AmarpAAAAAAAAAAAAAAAAAAAAAL6Xqery1dz/8tXc/5i+5f+VveX/cLTp/4K5
+        5/97tun/grnn//LV3P/y1dz/vpep6gAAAAAAAAAAAAAAAAAAAADNqrjg8tXc//LU3P/aw87/1rrI/8Wz
+        xv/Gs8X/1LrH/8e/0v/y1Nz/8tXc/82quOAAAAAAAAAAAAAAAAAAAAAAyqa14tGvvP/Sr7z/4L/K/+rL
+        1P/x1Nv/8dTb/+rL1P/gv8r/0q+8/9GvvP/KprbiAAAAAAAAAAAAAAAAAAAAALeRo+7x1Nv/8tXc//LV
+        3P/y1dz/8tXc//LV3P/y1dz/8tXc//LV3P/x1Nv/uJGj7gAAAAAAAAAAAAAAAAAAAADNqrjg8tXc//LV
+        3P/y1dz/8tXc//LV3P/y1dz/8tXc//LV3P/y1dz/8tXc/82quOAAAAAAAAAAAAAAAAAAAAAAzaq44OzO
+        1v/Ws8D/0a+8/9Csuf/Oqrj/zqq4/9Csuf/Rrrv/1rTA/+zO1v/NqrjgAAAAAAAAAAAAAAAAAAAAAMOf
+        r+7TsLz/7M3W//LV3P/y1dz/8tXc//LV3P/y1dz/8tXc/+vN1f/Tr73/w56u7gAAAAAAAAAAAAAAAAAA
+        AADGoa/q8tXc//LV3P/y1dz/8tXc//LV3P/y1dz/8tXc//LV3P/y1dz/8tXc/8ahsOkAAAAAAAAAAAAA
+        AAAAAAAAt4yeR8SfrsTcu8Xz79HZ//LV3P/y1dz/8tXc//LV3P/v0tj/27rE88SfrsSzip1GAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAqoCSKraPn322j6CWuJGioriRoqK2j6CWtY6gfKh8lSkAAAAAAAAAAAAA
+        AAAAAAAA8A8AAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMAD
+        AADAAwAA8A8AAA==
+</value>
+  </data>
 </root>

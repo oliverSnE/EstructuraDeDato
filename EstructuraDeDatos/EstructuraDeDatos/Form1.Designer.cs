@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.unidad1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,65 +50,80 @@
             this.unidad5ToolStripMenuItem});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(800, 28);
+            this.msMenu.Size = new System.Drawing.Size(1178, 40);
             this.msMenu.TabIndex = 1;
             this.msMenu.Text = "menuStrip1";
             // 
             // unidad1ToolStripMenuItem
             // 
+            this.unidad1ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidad1ToolStripMenuItem.Name = "unidad1ToolStripMenuItem";
-            this.unidad1ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.unidad1ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
             this.unidad1ToolStripMenuItem.Text = "Unidad 1";
             // 
             // unidad2ToolStripMenuItem
             // 
+            this.unidad2ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidad2ToolStripMenuItem.Name = "unidad2ToolStripMenuItem";
-            this.unidad2ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.unidad2ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
             this.unidad2ToolStripMenuItem.Text = "Unidad 2";
             // 
             // unidad3ToolStripMenuItem
             // 
+            this.unidad3ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidad3ToolStripMenuItem.Name = "unidad3ToolStripMenuItem";
-            this.unidad3ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.unidad3ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
             this.unidad3ToolStripMenuItem.Text = "Unidad 3";
             // 
             // unidad4ToolStripMenuItem
             // 
+            this.unidad4ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidad4ToolStripMenuItem.Name = "unidad4ToolStripMenuItem";
-            this.unidad4ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.unidad4ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
             this.unidad4ToolStripMenuItem.Text = "Unidad 4";
             // 
             // unidad5ToolStripMenuItem
             // 
+            this.unidad5ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidad5ToolStripMenuItem.Name = "unidad5ToolStripMenuItem";
-            this.unidad5ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.unidad5ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
             this.unidad5ToolStripMenuItem.Text = "Unidad 5";
             // 
             // txtBienvenida
             // 
             this.txtBienvenida.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtBienvenida.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBienvenida.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBienvenida.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtBienvenida.Location = new System.Drawing.Point(13, 32);
+            this.txtBienvenida.ForeColor = System.Drawing.Color.SpringGreen;
+            this.txtBienvenida.Location = new System.Drawing.Point(0, 343);
             this.txtBienvenida.Multiline = true;
             this.txtBienvenida.Name = "txtBienvenida";
-            this.txtBienvenida.Size = new System.Drawing.Size(775, 406);
+            this.txtBienvenida.ReadOnly = true;
+            this.txtBienvenida.Size = new System.Drawing.Size(1178, 406);
             this.txtBienvenida.TabIndex = 2;
+            this.txtBienvenida.TabStop = false;
+            this.txtBienvenida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1178, 749);
             this.Controls.Add(this.txtBienvenida);
             this.Controls.Add(this.msMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menú Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             this.ResumeLayout(false);
