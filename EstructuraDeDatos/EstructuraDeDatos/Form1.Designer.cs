@@ -36,6 +36,8 @@
             this.unidad4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtBienvenida = new System.Windows.Forms.TextBox();
+            this.tiposDeDatosAbstractosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recursividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +58,9 @@
             // 
             // unidad1ToolStripMenuItem
             // 
+            this.unidad1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tiposDeDatosAbstractosToolStripMenuItem,
+            this.recursividadToolStripMenuItem});
             this.unidad1ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidad1ToolStripMenuItem.Name = "unidad1ToolStripMenuItem";
             this.unidad1ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
@@ -94,8 +99,8 @@
             this.txtBienvenida.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtBienvenida.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBienvenida.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBienvenida.ForeColor = System.Drawing.Color.SpringGreen;
+            this.txtBienvenida.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBienvenida.ForeColor = System.Drawing.Color.Chartreuse;
             this.txtBienvenida.Location = new System.Drawing.Point(0, 343);
             this.txtBienvenida.Multiline = true;
             this.txtBienvenida.Name = "txtBienvenida";
@@ -104,6 +109,18 @@
             this.txtBienvenida.TabIndex = 2;
             this.txtBienvenida.TabStop = false;
             this.txtBienvenida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tiposDeDatosAbstractosToolStripMenuItem
+            // 
+            this.tiposDeDatosAbstractosToolStripMenuItem.Name = "tiposDeDatosAbstractosToolStripMenuItem";
+            this.tiposDeDatosAbstractosToolStripMenuItem.Size = new System.Drawing.Size(366, 36);
+            this.tiposDeDatosAbstractosToolStripMenuItem.Text = "Tipos de datos abstractos";
+            // 
+            // recursividadToolStripMenuItem
+            // 
+            this.recursividadToolStripMenuItem.Name = "recursividadToolStripMenuItem";
+            this.recursividadToolStripMenuItem.Size = new System.Drawing.Size(366, 36);
+            this.recursividadToolStripMenuItem.Text = "Recursividad";
             // 
             // Form1
             // 
@@ -114,7 +131,7 @@
             this.ClientSize = new System.Drawing.Size(1178, 749);
             this.Controls.Add(this.txtBienvenida);
             this.Controls.Add(this.msMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "Form1";
@@ -140,6 +157,8 @@
         private System.Windows.Forms.ToolStripMenuItem unidad4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unidad5ToolStripMenuItem;
         private System.Windows.Forms.TextBox txtBienvenida;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeDatosAbstractosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recursividadToolStripMenuItem;
     }
 }
 
