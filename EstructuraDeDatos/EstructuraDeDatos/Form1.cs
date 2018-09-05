@@ -22,7 +22,6 @@ namespace EstructuraDeDatos
             txtBienvenida.Width = Convert.ToInt32(this.Width*0.6);
             txtBienvenida.Height = Convert.ToInt32(this.Height*0.7);
             msMenu.Height = Convert.ToInt32(this.Height * 0.10);
-
             txtBienvenida.Text = "El alumno desarrollará aplicaciones que organicen información con base a estructuras de datos abstractas empleando el paradigma orientado a objetos para agilizar el acceso a los datos almacenados.";
 
 
