@@ -32,8 +32,9 @@ namespace EstructuraDeDatos
             dato = rString.Checked == true ? 5 : dato;
             dato = rAdt1.Checked == true ? 6 : dato;
             dato = rAdt2.Checked == true ? 7 : dato;
-            
+            this.Hide();
             new frmTiposDeDatos2(dato).ShowDialog();
+            this.Show();
         }
     }
 }

@@ -31,13 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.unidad1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeDatosAbstractosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recursividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtBienvenida = new System.Windows.Forms.TextBox();
-            this.tiposDeDatosAbstractosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recursividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fibonacciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mCDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.búsquedaBinariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebaDeFibonacciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fractalDeHilbertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.práctica1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +71,26 @@
             this.unidad1ToolStripMenuItem.Name = "unidad1ToolStripMenuItem";
             this.unidad1ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
             this.unidad1ToolStripMenuItem.Text = "Unidad 1";
+            // 
+            // tiposDeDatosAbstractosToolStripMenuItem
+            // 
+            this.tiposDeDatosAbstractosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.práctica1ToolStripMenuItem});
+            this.tiposDeDatosAbstractosToolStripMenuItem.Name = "tiposDeDatosAbstractosToolStripMenuItem";
+            this.tiposDeDatosAbstractosToolStripMenuItem.Size = new System.Drawing.Size(366, 36);
+            this.tiposDeDatosAbstractosToolStripMenuItem.Text = "Tipos de datos abstractos";
+            // 
+            // recursividadToolStripMenuItem
+            // 
+            this.recursividadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fibonacciToolStripMenuItem,
+            this.mCDToolStripMenuItem,
+            this.búsquedaBinariaToolStripMenuItem,
+            this.pruebaDeFibonacciToolStripMenuItem,
+            this.fractalDeHilbertToolStripMenuItem});
+            this.recursividadToolStripMenuItem.Name = "recursividadToolStripMenuItem";
+            this.recursividadToolStripMenuItem.Size = new System.Drawing.Size(366, 36);
+            this.recursividadToolStripMenuItem.Text = "Recursividad";
             // 
             // unidad2ToolStripMenuItem
             // 
@@ -110,17 +136,42 @@
             this.txtBienvenida.TabStop = false;
             this.txtBienvenida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tiposDeDatosAbstractosToolStripMenuItem
+            // fibonacciToolStripMenuItem
             // 
-            this.tiposDeDatosAbstractosToolStripMenuItem.Name = "tiposDeDatosAbstractosToolStripMenuItem";
-            this.tiposDeDatosAbstractosToolStripMenuItem.Size = new System.Drawing.Size(366, 36);
-            this.tiposDeDatosAbstractosToolStripMenuItem.Text = "Tipos de datos abstractos";
+            this.fibonacciToolStripMenuItem.Name = "fibonacciToolStripMenuItem";
+            this.fibonacciToolStripMenuItem.Size = new System.Drawing.Size(311, 36);
+            this.fibonacciToolStripMenuItem.Text = "Fibonacci";
             // 
-            // recursividadToolStripMenuItem
+            // mCDToolStripMenuItem
             // 
-            this.recursividadToolStripMenuItem.Name = "recursividadToolStripMenuItem";
-            this.recursividadToolStripMenuItem.Size = new System.Drawing.Size(366, 36);
-            this.recursividadToolStripMenuItem.Text = "Recursividad";
+            this.mCDToolStripMenuItem.Name = "mCDToolStripMenuItem";
+            this.mCDToolStripMenuItem.Size = new System.Drawing.Size(311, 36);
+            this.mCDToolStripMenuItem.Text = "MCD";
+            // 
+            // búsquedaBinariaToolStripMenuItem
+            // 
+            this.búsquedaBinariaToolStripMenuItem.Name = "búsquedaBinariaToolStripMenuItem";
+            this.búsquedaBinariaToolStripMenuItem.Size = new System.Drawing.Size(311, 36);
+            this.búsquedaBinariaToolStripMenuItem.Text = "Búsqueda binaria";
+            // 
+            // pruebaDeFibonacciToolStripMenuItem
+            // 
+            this.pruebaDeFibonacciToolStripMenuItem.Name = "pruebaDeFibonacciToolStripMenuItem";
+            this.pruebaDeFibonacciToolStripMenuItem.Size = new System.Drawing.Size(311, 36);
+            this.pruebaDeFibonacciToolStripMenuItem.Text = "Prueba de Fibonacci";
+            // 
+            // fractalDeHilbertToolStripMenuItem
+            // 
+            this.fractalDeHilbertToolStripMenuItem.Name = "fractalDeHilbertToolStripMenuItem";
+            this.fractalDeHilbertToolStripMenuItem.Size = new System.Drawing.Size(311, 36);
+            this.fractalDeHilbertToolStripMenuItem.Text = "Fractal de Hilbert";
+            // 
+            // práctica1ToolStripMenuItem
+            // 
+            this.práctica1ToolStripMenuItem.Name = "práctica1ToolStripMenuItem";
+            this.práctica1ToolStripMenuItem.Size = new System.Drawing.Size(216, 36);
+            this.práctica1ToolStripMenuItem.Text = "Práctica 1";
+            this.práctica1ToolStripMenuItem.Click += new System.EventHandler(this.práctica1ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -159,6 +210,12 @@
         private System.Windows.Forms.TextBox txtBienvenida;
         private System.Windows.Forms.ToolStripMenuItem tiposDeDatosAbstractosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recursividadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem práctica1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fibonacciToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mCDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem búsquedaBinariaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pruebaDeFibonacciToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fractalDeHilbertToolStripMenuItem;
     }
 }
 

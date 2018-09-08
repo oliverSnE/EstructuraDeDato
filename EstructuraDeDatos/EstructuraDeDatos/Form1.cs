@@ -39,5 +39,15 @@ namespace EstructuraDeDatos
         {
             responsive();
         }
+
+        private void práctica1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTiposDeDatos TDD = new frmTiposDeDatos();
+            this.Hide();
+            TDD.ShowDialog();
+            this.Show();
+           
+           
+        }
     }
 }

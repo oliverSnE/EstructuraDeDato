@@ -266,9 +266,14 @@ namespace EstructuraDeDatos
 
         private void dgvMatriz_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             lblSeleccionado.Visible = true;
             lblElementoSeleccionado.Text = "Elemento seleccionado [" + dgvMatriz.CurrentCell.ColumnIndex + "," + dgvMatriz.CurrentCell.RowIndex + "] =";
             lblSeleccionado.Text = dgvMatriz.CurrentCell.Value.ToString();
+            if (tipo == 6)
+            {
+           //     lblSeleccionado.Text =
+            }
         }
     }
 
