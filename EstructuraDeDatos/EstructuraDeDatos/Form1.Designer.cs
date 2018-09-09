@@ -30,37 +30,60 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.msMenu = new System.Windows.Forms.MenuStrip();
+            this.unidad5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeDatosAbstractosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.práctica1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recursividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unidad2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unidad3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unidad4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unidad5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtBienvenida = new System.Windows.Forms.TextBox();
             this.fibonacciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mCDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.búsquedaBinariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pruebaDeFibonacciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fractalDeHilbertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.práctica1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unidad2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unidad3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unidad4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
+            this.pnlContenido = new System.Windows.Forms.Panel();
+            this.txtBienvenida = new System.Windows.Forms.TextBox();
             this.msMenu.SuspendLayout();
+            this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
+            this.pnlContenido.SuspendLayout();
             this.SuspendLayout();
             // 
             // msMenu
             // 
+            this.msMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.msMenu.Dock = System.Windows.Forms.DockStyle.None;
+            this.msMenu.Font = new System.Drawing.Font("Lucida Sans Typewriter", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.unidad5ToolStripMenuItem,
             this.unidad1ToolStripMenuItem,
             this.unidad2ToolStripMenuItem,
             this.unidad3ToolStripMenuItem,
             this.unidad4ToolStripMenuItem,
-            this.unidad5ToolStripMenuItem});
-            this.msMenu.Location = new System.Drawing.Point(0, 0);
+            this.toolStripMenuItem1});
+            this.msMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+            this.msMenu.Location = new System.Drawing.Point(0, 42);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(1178, 40);
+            this.msMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.msMenu.Size = new System.Drawing.Size(923, 40);
             this.msMenu.TabIndex = 1;
             this.msMenu.Text = "menuStrip1";
+            // 
+            // unidad5ToolStripMenuItem
+            // 
+            this.unidad5ToolStripMenuItem.AutoSize = false;
+            this.unidad5ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unidad5ToolStripMenuItem.Name = "unidad5ToolStripMenuItem";
+            this.unidad5ToolStripMenuItem.Size = new System.Drawing.Size(152, 36);
+            this.unidad5ToolStripMenuItem.Text = "Home";
+            this.unidad5ToolStripMenuItem.Click += new System.EventHandler(this.unidad5ToolStripMenuItem_Click);
             // 
             // unidad1ToolStripMenuItem
             // 
@@ -80,6 +103,13 @@
             this.tiposDeDatosAbstractosToolStripMenuItem.Size = new System.Drawing.Size(366, 36);
             this.tiposDeDatosAbstractosToolStripMenuItem.Text = "Tipos de datos abstractos";
             // 
+            // práctica1ToolStripMenuItem
+            // 
+            this.práctica1ToolStripMenuItem.Name = "práctica1ToolStripMenuItem";
+            this.práctica1ToolStripMenuItem.Size = new System.Drawing.Size(197, 36);
+            this.práctica1ToolStripMenuItem.Text = "Práctica 1";
+            this.práctica1ToolStripMenuItem.Click += new System.EventHandler(this.práctica1ToolStripMenuItem_Click);
+            // 
             // recursividadToolStripMenuItem
             // 
             this.recursividadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -92,55 +122,12 @@
             this.recursividadToolStripMenuItem.Size = new System.Drawing.Size(366, 36);
             this.recursividadToolStripMenuItem.Text = "Recursividad";
             // 
-            // unidad2ToolStripMenuItem
-            // 
-            this.unidad2ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unidad2ToolStripMenuItem.Name = "unidad2ToolStripMenuItem";
-            this.unidad2ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
-            this.unidad2ToolStripMenuItem.Text = "Unidad 2";
-            // 
-            // unidad3ToolStripMenuItem
-            // 
-            this.unidad3ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unidad3ToolStripMenuItem.Name = "unidad3ToolStripMenuItem";
-            this.unidad3ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
-            this.unidad3ToolStripMenuItem.Text = "Unidad 3";
-            // 
-            // unidad4ToolStripMenuItem
-            // 
-            this.unidad4ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unidad4ToolStripMenuItem.Name = "unidad4ToolStripMenuItem";
-            this.unidad4ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
-            this.unidad4ToolStripMenuItem.Text = "Unidad 4";
-            // 
-            // unidad5ToolStripMenuItem
-            // 
-            this.unidad5ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unidad5ToolStripMenuItem.Name = "unidad5ToolStripMenuItem";
-            this.unidad5ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
-            this.unidad5ToolStripMenuItem.Text = "Unidad 5";
-            // 
-            // txtBienvenida
-            // 
-            this.txtBienvenida.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtBienvenida.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBienvenida.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtBienvenida.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBienvenida.ForeColor = System.Drawing.Color.Chartreuse;
-            this.txtBienvenida.Location = new System.Drawing.Point(0, 343);
-            this.txtBienvenida.Multiline = true;
-            this.txtBienvenida.Name = "txtBienvenida";
-            this.txtBienvenida.ReadOnly = true;
-            this.txtBienvenida.Size = new System.Drawing.Size(1178, 406);
-            this.txtBienvenida.TabIndex = 2;
-            this.txtBienvenida.TabStop = false;
-            this.txtBienvenida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // fibonacciToolStripMenuItem
             // 
             this.fibonacciToolStripMenuItem.Name = "fibonacciToolStripMenuItem";
             this.fibonacciToolStripMenuItem.Size = new System.Drawing.Size(311, 36);
             this.fibonacciToolStripMenuItem.Text = "Fibonacci";
+            this.fibonacciToolStripMenuItem.Click += new System.EventHandler(this.fibonacciToolStripMenuItem_Click);
             // 
             // mCDToolStripMenuItem
             // 
@@ -166,23 +153,90 @@
             this.fractalDeHilbertToolStripMenuItem.Size = new System.Drawing.Size(311, 36);
             this.fractalDeHilbertToolStripMenuItem.Text = "Fractal de Hilbert";
             // 
-            // práctica1ToolStripMenuItem
+            // unidad2ToolStripMenuItem
             // 
-            this.práctica1ToolStripMenuItem.Name = "práctica1ToolStripMenuItem";
-            this.práctica1ToolStripMenuItem.Size = new System.Drawing.Size(216, 36);
-            this.práctica1ToolStripMenuItem.Text = "Práctica 1";
-            this.práctica1ToolStripMenuItem.Click += new System.EventHandler(this.práctica1ToolStripMenuItem_Click);
+            this.unidad2ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unidad2ToolStripMenuItem.Name = "unidad2ToolStripMenuItem";
+            this.unidad2ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
+            this.unidad2ToolStripMenuItem.Text = "Unidad 2";
+            // 
+            // unidad3ToolStripMenuItem
+            // 
+            this.unidad3ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unidad3ToolStripMenuItem.Name = "unidad3ToolStripMenuItem";
+            this.unidad3ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
+            this.unidad3ToolStripMenuItem.Text = "Unidad 3";
+            // 
+            // unidad4ToolStripMenuItem
+            // 
+            this.unidad4ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unidad4ToolStripMenuItem.Name = "unidad4ToolStripMenuItem";
+            this.unidad4ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
+            this.unidad4ToolStripMenuItem.Text = "Unidad 4";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.AutoSize = false;
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(123, 36);
+            this.toolStripMenuItem1.Text = "Unidad 5";
+            // 
+            // pnlMenu
+            // 
+            this.pnlMenu.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.pnlMenu.Controls.Add(this.picCerrar);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 1);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(1178, 38);
+            this.pnlMenu.TabIndex = 11;
+            // 
+            // picCerrar
+            // 
+            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
+            this.picCerrar.Location = new System.Drawing.Point(1140, 3);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(26, 26);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picCerrar.TabIndex = 0;
+            this.picCerrar.TabStop = false;
+            // 
+            // pnlContenido
+            // 
+            this.pnlContenido.Controls.Add(this.txtBienvenida);
+            this.pnlContenido.Location = new System.Drawing.Point(0, 85);
+            this.pnlContenido.Name = "pnlContenido";
+            this.pnlContenido.Size = new System.Drawing.Size(1166, 637);
+            this.pnlContenido.TabIndex = 12;
+            // 
+            // txtBienvenida
+            // 
+            this.txtBienvenida.BackColor = System.Drawing.Color.SlateGray;
+            this.txtBienvenida.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBienvenida.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBienvenida.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.txtBienvenida.Location = new System.Drawing.Point(141, 58);
+            this.txtBienvenida.Multiline = true;
+            this.txtBienvenida.Name = "txtBienvenida";
+            this.txtBienvenida.ReadOnly = true;
+            this.txtBienvenida.Size = new System.Drawing.Size(375, 234);
+            this.txtBienvenida.TabIndex = 3;
+            this.txtBienvenida.TabStop = false;
+            this.txtBienvenida.Text = "Texto";
+            this.txtBienvenida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1178, 749);
-            this.Controls.Add(this.txtBienvenida);
+            this.Controls.Add(this.pnlContenido);
+            this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.msMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "Form1";
@@ -194,6 +248,10 @@
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
+            this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
+            this.pnlContenido.ResumeLayout(false);
+            this.pnlContenido.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +265,6 @@
         private System.Windows.Forms.ToolStripMenuItem unidad3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unidad4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unidad5ToolStripMenuItem;
-        private System.Windows.Forms.TextBox txtBienvenida;
         private System.Windows.Forms.ToolStripMenuItem tiposDeDatosAbstractosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recursividadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem práctica1ToolStripMenuItem;
@@ -216,6 +273,11 @@
         private System.Windows.Forms.ToolStripMenuItem búsquedaBinariaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pruebaDeFibonacciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fractalDeHilbertToolStripMenuItem;
+        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.PictureBox picCerrar;
+        private System.Windows.Forms.TextBox txtBienvenida;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        public System.Windows.Forms.Panel pnlContenido;
     }
 }
 

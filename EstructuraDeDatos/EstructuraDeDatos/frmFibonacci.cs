@@ -60,11 +60,21 @@ namespace EstructuraDeDatos
 
         private void txtLimite_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar)){
+            if (char.IsLetter(e.KeyChar)){
 
                 SendKeys.Send ("{BS}");
             }
             
+        }
+
+        private void frmFibonacci_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pnlTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

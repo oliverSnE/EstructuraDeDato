@@ -34,11 +34,22 @@ namespace EstructuraDeDatos
         {
             InitializeComponent();
         }
+        private void responsive()
+        {
+            gbContenido.Location = new Point(1, 1);
+            gbContenido.Width = this.Width - 2;
+            gbContenido.Height = this.Height - 2;
+
+
+        }
 
         public frmTiposDeDatos2(int tipo)
         {
             InitializeComponent();
             MessageBox.Show(tipo.ToString());
+            responsive();
+           
+
             this.tipo = tipo;
         }
 
@@ -52,107 +63,51 @@ namespace EstructuraDeDatos
             dgvMatriz[colum, row].Selected = false;
             if (tipo == 1)
             {
-                lblTipo.Text = "Entero";
+                gbContenido.Text = "Entero";
             }
             else if(tipo == 2)
             {
-                lblTipo.Text = "Double";
+                gbContenido.Text = "Double";
             }else if (tipo == 3)
             {
-                lblTipo.Text = "Decimal";
+                gbContenido.Text = "Decimal";
             }else if (tipo == 4)
             {
-                lblTipo.Text = "CHAR";
+                gbContenido.Text = "CHAR";
             }else if (tipo == 5)
             {
-                lblTipo.Text = "STRING";
+                gbContenido.Text = "STRING";
             }else if(tipo == 6)
             {
-                lblTipo.Text = "Triángulo";
+                gbContenido.Text = "Triángulo";
                 lblBase.Visible = true;
                 lblBase.Text = "Base:";
                 txtBase.Visible = true;
                 lblAltura.Visible = true;
                 lblAltura.Text = "Altura";
                 txtAltura.Visible = true;
-                lblElemento.Location = new Point(this.Width/2-lblElemento.Width/2,lblTipo.Height+5);
+                lblElemento.Location = new Point(this.Width/2-lblElemento.Width/2);
+                lblElemento.Text = "Elemento [" + colum + "," + row + "]";
                 txtElemento.Visible = false;
             }else
             {
-                lblTipo.Text = "Plano cartesiano";
+                gbContenido.Text = "Plano cartesiano";
                 lblBase.Visible = true;
                 lblBase.Text = "X: ";
                 txtBase.Visible = true;
                 lblAltura.Visible = true;
                 lblAltura.Text = "Y: ";
                 txtAltura.Visible = true;
-                lblElemento.Location = new Point(this.Width / 2 - lblElemento.Width / 2, lblTipo.Height + 5);
+                lblElemento.Location = new Point(this.Width / 2 - lblElemento.Width / 2);
+                lblElemento.Text = "Elemento [" + colum + "," + row + "] =";
                 txtElemento.Visible = false;
 
             }
 
         }
 
-        private void btnCapturar_Click(object sender, EventArgs e)
-        {
-            if (tipo == 6 )
-            {
-                
-                dgvMatriz[colum, row].Value = new Triangulos(Convert.ToDouble(txtBase.Text),Convert.ToDouble(txtAltura.Text));
-
-            }
-            else if (tipo == 7)
-            {
-                dgvMatriz[colum, row].Value = new PuntoCarteciano(Convert.ToInt32(txtBase.Text), Convert.ToInt32(txtAltura.Text));
-
-            }
-           
-            
-            else
-            {
-                dgvMatriz[colum, row].Selected = false;
-                dgvMatriz[colum, row].Value = txtElemento.Text;
-
-            }
-            colum++;
-            if (colum > 2)
-            {
-                colum = 0;
-                row++;
-
-            }
-            if (row == 3)
-            {
-                btnCapturar.Enabled = false;
-
-            }
-            else
-            {
-                lblElemento.Text = "Elemento [" + colum + "," + row + "] =";
-                dgvMatriz.CurrentCell = dgvMatriz[1, row];
-                dgvMatriz[1, row].Selected = false;
-                dgvMatriz[colum, row].Selected = true;
-
-            }
-
-            txtElemento.Clear();
-            txtElemento.Focus();
-            //btnCapturar.Enabled = false;
-            txtElemento.ResetText();
-
-        }
-
-        private void btnReiniciar_Click(object sender, EventArgs e)
-        {
-            colum = 0;
-            row = 0;
-            lblElemento.Text = "Elemento [" + colum + "," + row + "] =";
-            btnCapturar.Enabled = true;
-            dgvMatriz.Rows.Clear();
-            dgvMatriz.Rows.Add();
-            dgvMatriz.Rows.Add();
-            dgvMatriz.Rows.Add();
-        }
+        
+       
 
         private void txtElemento_Leave(object sender, EventArgs e)
         {
@@ -264,17 +219,98 @@ namespace EstructuraDeDatos
 
         }
 
-        private void dgvMatriz_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void btnCapturar_Click_1(object sender, EventArgs e)
         {
-            
+            if (tipo == 6)
+            {
+                
+
+                dgvMatriz[colum, row].Value = new Triangulos(Convert.ToDouble(txtBase.Text), Convert.ToDouble(txtAltura.Text));
+
+            }
+            else if (tipo == 7)
+            {
+                dgvMatriz[colum, row].Value = new PuntoCarteciano(Convert.ToInt32(txtBase.Text), Convert.ToInt32(txtAltura.Text));
+
+            }
+
+
+            else
+            {
+                dgvMatriz[colum, row].Selected = false;
+                dgvMatriz[colum, row].Value = txtElemento.Text;
+
+            }
+            colum++;
+            if (colum > 2)
+            {
+                colum = 0;
+                row++;
+
+            }
+            if (row == 3)
+            {
+                btnCapturar.Enabled = false;
+
+            }
+            else
+            {
+                lblElemento.Text = "Elemento [" + colum + "," + row + "] =";
+                dgvMatriz.CurrentCell = dgvMatriz[1, row];
+                dgvMatriz[1, row].Selected = false;
+                dgvMatriz[colum, row].Selected = true;
+
+            }
+
+            txtElemento.Clear();
+            txtElemento.Focus();
+            //btnCapturar.Enabled = false;
+            txtElemento.ResetText();
+
+
+        }
+
+        private void btnReiniciar_Click_1(object sender, EventArgs e)
+        {
+            colum = 0;
+            row = 0;
+            lblElemento.Text = "Elemento [" + colum + "," + row + "] =";
+            btnCapturar.Enabled = true;
+            dgvMatriz.Rows.Clear();
+            dgvMatriz.Rows.Add();
+            dgvMatriz.Rows.Add();
+            dgvMatriz.Rows.Add();
+
+        }
+
+        private void dgvMatriz_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             lblSeleccionado.Visible = true;
             lblElementoSeleccionado.Text = "Elemento seleccionado [" + dgvMatriz.CurrentCell.ColumnIndex + "," + dgvMatriz.CurrentCell.RowIndex + "] =";
             lblSeleccionado.Text = dgvMatriz.CurrentCell.Value.ToString();
             if (tipo == 6)
             {
-           //     lblSeleccionado.Text =
+
             }
+
         }
+
+        private void gbContenido_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picVolver_Click(object sender, EventArgs e)
+        {
+           this.Close();
+            frmTiposDeDatos tdd = new frmTiposDeDatos();
+            tdd.pnlContenido.Controls.Clear();
+            tdd.gbTipo.Visible = true;           
+                      
+        }
+        
     }
 
     public class Triangulos

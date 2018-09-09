@@ -30,138 +30,105 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblElemento = new System.Windows.Forms.Label();
-            this.txtElemento = new System.Windows.Forms.TextBox();
-            this.btnCapturar = new System.Windows.Forms.Button();
-            this.btnReiniciar = new System.Windows.Forms.Button();
-            this.lblElementoSeleccionado = new System.Windows.Forms.Label();
-            this.lblSeleccionado = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTiposDeDatos2));
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gbContenido = new System.Windows.Forms.GroupBox();
             this.dgvMatriz = new System.Windows.Forms.DataGridView();
             this.Colum1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colum3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblTipo = new System.Windows.Forms.Label();
-            this.lblBase = new System.Windows.Forms.Label();
-            this.lblAltura = new System.Windows.Forms.Label();
-            this.txtBase = new System.Windows.Forms.TextBox();
+            this.lblSeleccionado = new System.Windows.Forms.Label();
+            this.lblElementoSeleccionado = new System.Windows.Forms.Label();
+            this.btnReiniciar = new System.Windows.Forms.Button();
+            this.btnCapturar = new System.Windows.Forms.Button();
             this.txtAltura = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMatriz)).BeginInit();
+            this.txtBase = new System.Windows.Forms.TextBox();
+            this.txtElemento = new System.Windows.Forms.TextBox();
+            this.lblAltura = new System.Windows.Forms.Label();
+            this.lblBase = new System.Windows.Forms.Label();
+            this.lblElemento = new System.Windows.Forms.Label();
+            this.picVolver = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            this.gbContenido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatriz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVolver)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblElemento
+            // errorProvider
             // 
-            this.lblElemento.AutoSize = true;
-            this.lblElemento.Location = new System.Drawing.Point(18, 169);
-            this.lblElemento.Name = "lblElemento";
-            this.lblElemento.Size = new System.Drawing.Size(255, 33);
-            this.lblElemento.TabIndex = 0;
-            this.lblElemento.Text = "Elemento [0,0] =";
+            this.errorProvider.ContainerControl = this;
             // 
-            // txtElemento
+            // gbContenido
             // 
-            this.txtElemento.BackColor = System.Drawing.Color.GreenYellow;
-            this.txtElemento.Location = new System.Drawing.Point(279, 169);
-            this.txtElemento.Name = "txtElemento";
-            this.txtElemento.Size = new System.Drawing.Size(264, 39);
-            this.txtElemento.TabIndex = 1;
-            this.txtElemento.Leave += new System.EventHandler(this.txtElemento_Leave);
-            // 
-            // btnCapturar
-            // 
-            this.btnCapturar.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnCapturar.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapturar.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnCapturar.Location = new System.Drawing.Point(627, 169);
-            this.btnCapturar.Name = "btnCapturar";
-            this.btnCapturar.Size = new System.Drawing.Size(152, 39);
-            this.btnCapturar.TabIndex = 8;
-            this.btnCapturar.Text = "Capturar";
-            this.btnCapturar.UseVisualStyleBackColor = false;
-            this.btnCapturar.Click += new System.EventHandler(this.btnCapturar_Click);
-            // 
-            // btnReiniciar
-            // 
-            this.btnReiniciar.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnReiniciar.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReiniciar.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnReiniciar.Location = new System.Drawing.Point(785, 169);
-            this.btnReiniciar.Name = "btnReiniciar";
-            this.btnReiniciar.Size = new System.Drawing.Size(152, 39);
-            this.btnReiniciar.TabIndex = 9;
-            this.btnReiniciar.Text = "Reiniciar";
-            this.btnReiniciar.UseVisualStyleBackColor = false;
-            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
-            // 
-            // lblElementoSeleccionado
-            // 
-            this.lblElementoSeleccionado.AutoSize = true;
-            this.lblElementoSeleccionado.Location = new System.Drawing.Point(18, 220);
-            this.lblElementoSeleccionado.Name = "lblElementoSeleccionado";
-            this.lblElementoSeleccionado.Size = new System.Drawing.Size(450, 33);
-            this.lblElementoSeleccionado.TabIndex = 10;
-            this.lblElementoSeleccionado.Text = "Elemento [0,0] Seleccionado =";
-            // 
-            // lblSeleccionado
-            // 
-            this.lblSeleccionado.AutoSize = true;
-            this.lblSeleccionado.Location = new System.Drawing.Point(474, 220);
-            this.lblSeleccionado.Name = "lblSeleccionado";
-            this.lblSeleccionado.Size = new System.Drawing.Size(195, 33);
-            this.lblSeleccionado.TabIndex = 11;
-            this.lblSeleccionado.Text = "Seleccionado";
-            this.lblSeleccionado.Visible = false;
+            this.gbContenido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbContenido.Controls.Add(this.picVolver);
+            this.gbContenido.Controls.Add(this.dgvMatriz);
+            this.gbContenido.Controls.Add(this.lblSeleccionado);
+            this.gbContenido.Controls.Add(this.lblElementoSeleccionado);
+            this.gbContenido.Controls.Add(this.btnReiniciar);
+            this.gbContenido.Controls.Add(this.btnCapturar);
+            this.gbContenido.Controls.Add(this.txtAltura);
+            this.gbContenido.Controls.Add(this.txtBase);
+            this.gbContenido.Controls.Add(this.txtElemento);
+            this.gbContenido.Controls.Add(this.lblAltura);
+            this.gbContenido.Controls.Add(this.lblBase);
+            this.gbContenido.Controls.Add(this.lblElemento);
+            this.gbContenido.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.gbContenido.Location = new System.Drawing.Point(12, 7);
+            this.gbContenido.Name = "gbContenido";
+            this.gbContenido.Size = new System.Drawing.Size(1022, 646);
+            this.gbContenido.TabIndex = 0;
+            this.gbContenido.TabStop = false;
+            this.gbContenido.Text = "groupBox1";
+            this.gbContenido.Enter += new System.EventHandler(this.gbContenido_Enter);
             // 
             // dgvMatriz
             // 
             this.dgvMatriz.AllowUserToAddRows = false;
             this.dgvMatriz.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateGray;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             this.dgvMatriz.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMatriz.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMatriz.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMatriz.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvMatriz.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvMatriz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMatriz.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Colum1,
             this.Column1,
             this.Colum3});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.GreenYellow;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMatriz.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvMatriz.Location = new System.Drawing.Point(18, 276);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMatriz.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMatriz.Location = new System.Drawing.Point(6, 266);
             this.dgvMatriz.Name = "dgvMatriz";
             this.dgvMatriz.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMatriz.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMatriz.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMatriz.RowTemplate.Height = 24;
             this.dgvMatriz.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvMatriz.Size = new System.Drawing.Size(913, 246);
-            this.dgvMatriz.TabIndex = 12;
-            this.dgvMatriz.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatriz_CellContentClick);
+            this.dgvMatriz.Size = new System.Drawing.Size(1010, 114);
+            this.dgvMatriz.TabIndex = 24;
+            this.dgvMatriz.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatriz_CellContentClick_1);
             // 
             // Colum1
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.YellowGreen;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.Colum1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Colum1.HeaderText = "Columna 1";
             this.Colum1.Name = "Colum1";
             this.Colum1.ReadOnly = true;
@@ -178,109 +145,162 @@
             this.Colum3.Name = "Colum3";
             this.Colum3.ReadOnly = true;
             // 
-            // errorProvider
+            // lblSeleccionado
             // 
-            this.errorProvider.ContainerControl = this;
+            this.lblSeleccionado.AutoSize = true;
+            this.lblSeleccionado.Location = new System.Drawing.Point(462, 209);
+            this.lblSeleccionado.Name = "lblSeleccionado";
+            this.lblSeleccionado.Size = new System.Drawing.Size(195, 33);
+            this.lblSeleccionado.TabIndex = 23;
+            this.lblSeleccionado.Text = "Seleccionado";
+            this.lblSeleccionado.Visible = false;
             // 
-            // lblTipo
+            // lblElementoSeleccionado
             // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(408, 9);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(75, 33);
-            this.lblTipo.TabIndex = 13;
-            this.lblTipo.Text = "Tipo";
+            this.lblElementoSeleccionado.AutoSize = true;
+            this.lblElementoSeleccionado.Location = new System.Drawing.Point(6, 209);
+            this.lblElementoSeleccionado.Name = "lblElementoSeleccionado";
+            this.lblElementoSeleccionado.Size = new System.Drawing.Size(450, 33);
+            this.lblElementoSeleccionado.TabIndex = 22;
+            this.lblElementoSeleccionado.Text = "Elemento [0,0] Seleccionado =";
             // 
-            // lblBase
+            // btnReiniciar
             // 
-            this.lblBase.AutoSize = true;
-            this.lblBase.Location = new System.Drawing.Point(183, 55);
-            this.lblBase.Name = "lblBase";
-            this.lblBase.Size = new System.Drawing.Size(90, 33);
-            this.lblBase.TabIndex = 0;
-            this.lblBase.Text = "Base:";
-            this.lblBase.Visible = false;
+            this.btnReiniciar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnReiniciar.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReiniciar.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.btnReiniciar.Location = new System.Drawing.Point(773, 158);
+            this.btnReiniciar.Name = "btnReiniciar";
+            this.btnReiniciar.Size = new System.Drawing.Size(152, 39);
+            this.btnReiniciar.TabIndex = 21;
+            this.btnReiniciar.Text = "Reiniciar";
+            this.btnReiniciar.UseVisualStyleBackColor = false;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click_1);
+            // 
+            // btnCapturar
+            // 
+            this.btnCapturar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnCapturar.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapturar.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.btnCapturar.Location = new System.Drawing.Point(615, 158);
+            this.btnCapturar.Name = "btnCapturar";
+            this.btnCapturar.Size = new System.Drawing.Size(152, 39);
+            this.btnCapturar.TabIndex = 20;
+            this.btnCapturar.Text = "Capturar";
+            this.btnCapturar.UseVisualStyleBackColor = false;
+            this.btnCapturar.Click += new System.EventHandler(this.btnCapturar_Click_1);
+            // 
+            // txtAltura
+            // 
+            this.txtAltura.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.txtAltura.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.txtAltura.Location = new System.Drawing.Point(267, 86);
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.Size = new System.Drawing.Size(264, 39);
+            this.txtAltura.TabIndex = 17;
+            this.txtAltura.Visible = false;
+            // 
+            // txtBase
+            // 
+            this.txtBase.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.txtBase.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.txtBase.Location = new System.Drawing.Point(267, 41);
+            this.txtBase.Name = "txtBase";
+            this.txtBase.Size = new System.Drawing.Size(264, 39);
+            this.txtBase.TabIndex = 18;
+            this.txtBase.Visible = false;
+            // 
+            // txtElemento
+            // 
+            this.txtElemento.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.txtElemento.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.txtElemento.Location = new System.Drawing.Point(267, 158);
+            this.txtElemento.Name = "txtElemento";
+            this.txtElemento.Size = new System.Drawing.Size(264, 39);
+            this.txtElemento.TabIndex = 19;
             // 
             // lblAltura
             // 
             this.lblAltura.AutoSize = true;
-            this.lblAltura.Location = new System.Drawing.Point(153, 100);
+            this.lblAltura.Location = new System.Drawing.Point(141, 89);
             this.lblAltura.Name = "lblAltura";
             this.lblAltura.Size = new System.Drawing.Size(120, 33);
-            this.lblAltura.TabIndex = 0;
+            this.lblAltura.TabIndex = 14;
             this.lblAltura.Text = "Altura:";
             this.lblAltura.Visible = false;
             // 
-            // txtBase
+            // lblBase
             // 
-            this.txtBase.BackColor = System.Drawing.Color.GreenYellow;
-            this.txtBase.Location = new System.Drawing.Point(279, 52);
-            this.txtBase.Name = "txtBase";
-            this.txtBase.Size = new System.Drawing.Size(264, 39);
-            this.txtBase.TabIndex = 1;
-            this.txtBase.Visible = false;
-            this.txtBase.Leave += new System.EventHandler(this.txtElemento_Leave);
+            this.lblBase.AutoSize = true;
+            this.lblBase.Location = new System.Drawing.Point(171, 44);
+            this.lblBase.Name = "lblBase";
+            this.lblBase.Size = new System.Drawing.Size(90, 33);
+            this.lblBase.TabIndex = 15;
+            this.lblBase.Text = "Base:";
+            this.lblBase.Visible = false;
             // 
-            // txtAltura
+            // lblElemento
             // 
-            this.txtAltura.BackColor = System.Drawing.Color.GreenYellow;
-            this.txtAltura.Location = new System.Drawing.Point(279, 97);
-            this.txtAltura.Name = "txtAltura";
-            this.txtAltura.Size = new System.Drawing.Size(264, 39);
-            this.txtAltura.TabIndex = 1;
-            this.txtAltura.Visible = false;
-            this.txtAltura.Leave += new System.EventHandler(this.txtElemento_Leave);
+            this.lblElemento.AutoSize = true;
+            this.lblElemento.Location = new System.Drawing.Point(6, 158);
+            this.lblElemento.Name = "lblElemento";
+            this.lblElemento.Size = new System.Drawing.Size(255, 33);
+            this.lblElemento.TabIndex = 16;
+            this.lblElemento.Text = "Elemento [0,0] =";
+            // 
+            // picVolver
+            // 
+            this.picVolver.Image = ((System.Drawing.Image)(resources.GetObject("picVolver.Image")));
+            this.picVolver.Location = new System.Drawing.Point(12, 39);
+            this.picVolver.Name = "picVolver";
+            this.picVolver.Size = new System.Drawing.Size(32, 32);
+            this.picVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picVolver.TabIndex = 25;
+            this.picVolver.TabStop = false;
+            this.picVolver.Click += new System.EventHandler(this.picVolver_Click);
             // 
             // frmTiposDeDatos2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(943, 535);
-            this.Controls.Add(this.lblTipo);
-            this.Controls.Add(this.dgvMatriz);
-            this.Controls.Add(this.lblSeleccionado);
-            this.Controls.Add(this.lblElementoSeleccionado);
-            this.Controls.Add(this.btnReiniciar);
-            this.Controls.Add(this.btnCapturar);
-            this.Controls.Add(this.txtAltura);
-            this.Controls.Add(this.txtBase);
-            this.Controls.Add(this.txtElemento);
-            this.Controls.Add(this.lblAltura);
-            this.Controls.Add(this.lblBase);
-            this.Controls.Add(this.lblElemento);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1040, 658);
+            this.Controls.Add(this.gbContenido);
             this.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.GreenYellow;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmTiposDeDatos2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTiposDeDatos2";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmTiposDeDatos2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMatriz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            this.gbContenido.ResumeLayout(false);
+            this.gbContenido.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatriz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVolver)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblElemento;
-        private System.Windows.Forms.TextBox txtElemento;
-        private System.Windows.Forms.Button btnCapturar;
-        private System.Windows.Forms.Button btnReiniciar;
-        private System.Windows.Forms.Label lblElementoSeleccionado;
-        private System.Windows.Forms.Label lblSeleccionado;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.GroupBox gbContenido;
         private System.Windows.Forms.DataGridView dgvMatriz;
         private System.Windows.Forms.DataGridViewTextBoxColumn Colum1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Colum3;
-        private System.Windows.Forms.ErrorProvider errorProvider;
-        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.Label lblSeleccionado;
+        private System.Windows.Forms.Label lblElementoSeleccionado;
+        private System.Windows.Forms.Button btnReiniciar;
+        private System.Windows.Forms.Button btnCapturar;
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.TextBox txtBase;
+        private System.Windows.Forms.TextBox txtElemento;
         private System.Windows.Forms.Label lblAltura;
         private System.Windows.Forms.Label lblBase;
+        private System.Windows.Forms.Label lblElemento;
+        private System.Windows.Forms.PictureBox picVolver;
     }
 }

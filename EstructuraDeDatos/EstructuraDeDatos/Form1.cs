@@ -22,6 +22,13 @@ namespace EstructuraDeDatos
             txtBienvenida.Width = Convert.ToInt32(this.Width*0.6);
             txtBienvenida.Height = Convert.ToInt32(this.Height*0.7);
             msMenu.Height = Convert.ToInt32(this.Height * 0.10);
+            msMenu.Width = this.Width;
+            pnlMenu.Width = this.Width;
+            picCerrar.Location = new Point(this.Width - picCerrar.Width - 5, pnlMenu.Height /2 - picCerrar.Height/2);
+            picCerrar.Height = pnlMenu.Height;
+            pnlContenido.Location = new Point(1,pnlMenu.Height+msMenu.Height);
+            pnlContenido.Height = this.Height - pnlMenu.Height - msMenu.Height;
+            pnlContenido.Width = this.Width;
             txtBienvenida.Text = "El alumno desarrollará aplicaciones que organicen información con base a estructuras de datos abstractas empleando el paradigma orientado a objetos para agilizar el acceso a los datos almacenados.";
         }
 
@@ -42,12 +49,36 @@ namespace EstructuraDeDatos
 
         private void práctica1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            pnlContenido.Enabled = false;
+            pnlContenido.Controls.Clear();
+            pnlContenido.Enabled = true;
             frmTiposDeDatos TDD = new frmTiposDeDatos();
-            this.Hide();
-            TDD.ShowDialog();
-            this.Show();
+            TDD.TopLevel = false;
+            pnlContenido.Controls.Add(TDD);
+            TDD.Show();
            
            
+           
+        }
+
+        private void unidad5ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContenido.Enabled = false;
+            pnlContenido.Controls.Clear();
+            pnlContenido.Enabled = true;
+            pnlContenido.Controls.Add(txtBienvenida);
+            
+        }
+
+        private void fibonacciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContenido.Enabled = false;
+            pnlContenido.Controls.Clear();
+            pnlContenido.Enabled = true;
+            frmFibonacci fibonacci = new frmFibonacci();
+            fibonacci.TopLevel = false;
+            pnlContenido.Controls.Add(fibonacci);
+            fibonacci.Show();
         }
     }
 }
