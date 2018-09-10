@@ -48,17 +48,16 @@
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.pnlContenido = new System.Windows.Forms.Panel();
             this.txtBienvenida = new System.Windows.Forms.TextBox();
+            this.pnlstrip = new System.Windows.Forms.Panel();
             this.msMenu.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.pnlContenido.SuspendLayout();
+            this.pnlstrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // msMenu
             // 
-            this.msMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.msMenu.Dock = System.Windows.Forms.DockStyle.None;
             this.msMenu.Font = new System.Drawing.Font("Lucida Sans Typewriter", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -69,10 +68,10 @@
             this.unidad4ToolStripMenuItem,
             this.toolStripMenuItem1});
             this.msMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.msMenu.Location = new System.Drawing.Point(0, 42);
+            this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
             this.msMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.msMenu.Size = new System.Drawing.Size(923, 40);
+            this.msMenu.Size = new System.Drawing.Size(1175, 40);
             this.msMenu.TabIndex = 1;
             this.msMenu.Text = "menuStrip1";
             // 
@@ -201,6 +200,7 @@
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picCerrar.TabIndex = 0;
             this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
             // pnlContenido
             // 
@@ -226,6 +226,14 @@
             this.txtBienvenida.Text = "Texto";
             this.txtBienvenida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pnlstrip
+            // 
+            this.pnlstrip.Controls.Add(this.msMenu);
+            this.pnlstrip.Location = new System.Drawing.Point(0, 38);
+            this.pnlstrip.Name = "pnlstrip";
+            this.pnlstrip.Size = new System.Drawing.Size(1175, 41);
+            this.pnlstrip.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -233,9 +241,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1178, 749);
+            this.Controls.Add(this.pnlstrip);
             this.Controls.Add(this.pnlContenido);
             this.Controls.Add(this.pnlMenu);
-            this.Controls.Add(this.msMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
@@ -252,8 +260,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.pnlContenido.ResumeLayout(false);
             this.pnlContenido.PerformLayout();
+            this.pnlstrip.ResumeLayout(false);
+            this.pnlstrip.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -278,6 +287,7 @@
         private System.Windows.Forms.TextBox txtBienvenida;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         public System.Windows.Forms.Panel pnlContenido;
+        private System.Windows.Forms.Panel pnlstrip;
     }
 }
 

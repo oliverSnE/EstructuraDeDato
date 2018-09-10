@@ -30,6 +30,7 @@ namespace EstructuraDeDatos
             pnlContenido.Height = this.Height - pnlMenu.Height - msMenu.Height;
             pnlContenido.Width = this.Width;
             txtBienvenida.Text = "El alumno desarrollará aplicaciones que organicen información con base a estructuras de datos abstractas empleando el paradigma orientado a objetos para agilizar el acceso a los datos almacenados.";
+            pnlstrip.Width = this.Width;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -80,5 +81,8 @@ namespace EstructuraDeDatos
             pnlContenido.Controls.Add(fibonacci);
             fibonacci.Show();
         }
+
+        private void picCerrar_Click(object sender, EventArgs e) => this.Close();
+        
     }
 }
