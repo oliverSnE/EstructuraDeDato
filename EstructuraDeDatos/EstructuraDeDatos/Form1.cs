@@ -16,6 +16,7 @@ namespace EstructuraDeDatos
         {
             InitializeComponent();
         }
+
         private void responsive()
         {
             txtBienvenida.Location = new Point(this.Width/2-txtBienvenida.Width/2,this.Height/2-txtBienvenida.Height/2);
@@ -83,6 +84,27 @@ namespace EstructuraDeDatos
         }
 
         private void picCerrar_Click(object sender, EventArgs e) => this.Close();
-        
+
+        private void mCDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContenido.Enabled = false;
+            pnlContenido.Controls.Clear();
+            pnlContenido.Enabled = true;
+            frmMcd mcd = new frmMcd();
+            mcd.TopLevel = false;
+            pnlContenido.Controls.Add(mcd);
+            mcd.Show();
+        }
+
+        private void búsquedaBinariaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContenido.Enabled = false;
+            pnlContenido.Controls.Clear();
+            pnlContenido.Enabled = true;
+            frmBusquedaBinaria binario = new frmBusquedaBinaria();
+            binario.TopLevel = false;
+            pnlContenido.Controls.Add(binario);
+            binario.Show();
+        }
     }
 }

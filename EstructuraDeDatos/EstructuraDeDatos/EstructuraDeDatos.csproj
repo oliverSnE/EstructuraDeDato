@@ -51,11 +51,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBusquedaBinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaBinaria.Designer.cs">
+      <DependentUpon>frmBusquedaBinaria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFibonacci.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmFibonacci.Designer.cs">
       <DependentUpon>frmFibonacci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMcd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMcd.Designer.cs">
+      <DependentUpon>frmMcd.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTiposDeDatos.cs">
       <SubType>Form</SubType>
@@ -75,8 +87,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBusquedaBinaria.resx">
+      <DependentUpon>frmBusquedaBinaria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFibonacci.resx">
       <DependentUpon>frmFibonacci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMcd.resx">
+      <DependentUpon>frmMcd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiposDeDatos.resx">
       <DependentUpon>frmTiposDeDatos.cs</DependentUpon>

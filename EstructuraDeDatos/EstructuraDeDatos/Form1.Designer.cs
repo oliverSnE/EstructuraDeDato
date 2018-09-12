@@ -45,15 +45,15 @@
             this.unidad4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.pnlContenido = new System.Windows.Forms.Panel();
             this.txtBienvenida = new System.Windows.Forms.TextBox();
             this.pnlstrip = new System.Windows.Forms.Panel();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.msMenu.SuspendLayout();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.pnlContenido.SuspendLayout();
             this.pnlstrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // msMenu
@@ -133,12 +133,14 @@
             this.mCDToolStripMenuItem.Name = "mCDToolStripMenuItem";
             this.mCDToolStripMenuItem.Size = new System.Drawing.Size(311, 36);
             this.mCDToolStripMenuItem.Text = "MCD";
+            this.mCDToolStripMenuItem.Click += new System.EventHandler(this.mCDToolStripMenuItem_Click);
             // 
             // búsquedaBinariaToolStripMenuItem
             // 
             this.búsquedaBinariaToolStripMenuItem.Name = "búsquedaBinariaToolStripMenuItem";
             this.búsquedaBinariaToolStripMenuItem.Size = new System.Drawing.Size(311, 36);
             this.búsquedaBinariaToolStripMenuItem.Text = "Búsqueda binaria";
+            this.búsquedaBinariaToolStripMenuItem.Click += new System.EventHandler(this.búsquedaBinariaToolStripMenuItem_Click);
             // 
             // pruebaDeFibonacciToolStripMenuItem
             // 
@@ -190,21 +192,10 @@
             this.pnlMenu.Size = new System.Drawing.Size(1178, 38);
             this.pnlMenu.TabIndex = 11;
             // 
-            // picCerrar
-            // 
-            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
-            this.picCerrar.Location = new System.Drawing.Point(1140, 3);
-            this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(26, 26);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picCerrar.TabIndex = 0;
-            this.picCerrar.TabStop = false;
-            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
-            // 
             // pnlContenido
             // 
             this.pnlContenido.Controls.Add(this.txtBienvenida);
+            this.pnlContenido.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.pnlContenido.Location = new System.Drawing.Point(0, 85);
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(1166, 637);
@@ -234,6 +225,18 @@
             this.pnlstrip.Size = new System.Drawing.Size(1175, 41);
             this.pnlstrip.TabIndex = 13;
             // 
+            // picCerrar
+            // 
+            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
+            this.picCerrar.Location = new System.Drawing.Point(1140, 3);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(26, 26);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picCerrar.TabIndex = 0;
+            this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -257,11 +260,11 @@
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.pnlContenido.ResumeLayout(false);
             this.pnlContenido.PerformLayout();
             this.pnlstrip.ResumeLayout(false);
             this.pnlstrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
