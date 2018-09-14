@@ -23,9 +23,11 @@ namespace EstructuraDeDatos
         {
             foreach (PictureBox pic in this.Controls.OfType<PictureBox>())
             {
+                
                 pic.Image = EstructuraDeDatos.Properties.Resources.reverso;
                 pic.Update();
             }
+            
         }
 
         private void flip (PictureBox pic, int entero)
