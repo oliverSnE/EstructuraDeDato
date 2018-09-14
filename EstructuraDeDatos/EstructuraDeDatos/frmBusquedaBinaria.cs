@@ -134,11 +134,9 @@ namespace EstructuraDeDatos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
-
-           // busqueda()
-           
+            //busqueda();
         }
+
         public static object busqueda(int[] num, int key)
         {
             int minimo = 0;

@@ -69,6 +69,12 @@
     <Compile Include="frmMcd.Designer.cs">
       <DependentUpon>frmMcd.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMemorama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMemorama.Designer.cs">
+      <DependentUpon>frmMemorama.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTiposDeDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMcd.resx">
       <DependentUpon>frmMcd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMemorama.resx">
+      <DependentUpon>frmMemorama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiposDeDatos.resx">
       <DependentUpon>frmTiposDeDatos.cs</DependentUpon>
@@ -127,6 +136,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\n0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\n1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\n2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\n3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\n4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\n5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\n6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\n7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\reverso.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\nf.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

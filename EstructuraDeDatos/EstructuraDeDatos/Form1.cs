@@ -106,5 +106,16 @@ namespace EstructuraDeDatos
             pnlContenido.Controls.Add(binario);
             binario.Show();
         }
+
+        private void memoramaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContenido.Enabled = false;
+            pnlContenido.Controls.Clear();
+            pnlContenido.Enabled = true;
+            frmMemorama memo = new frmMemorama();
+            memo.TopLevel = false;
+            pnlContenido.Controls.Add(memo);
+            memo.Show();
+        }
     }
 }

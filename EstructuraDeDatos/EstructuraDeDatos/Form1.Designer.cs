@@ -48,6 +48,7 @@
             this.pnlContenido = new System.Windows.Forms.Panel();
             this.txtBienvenida = new System.Windows.Forms.TextBox();
             this.pnlstrip = new System.Windows.Forms.Panel();
+            this.memoramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.msMenu.SuspendLayout();
             this.pnlMenu.SuspendLayout();
@@ -156,6 +157,8 @@
             // 
             // unidad2ToolStripMenuItem
             // 
+            this.unidad2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.memoramaToolStripMenuItem});
             this.unidad2ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidad2ToolStripMenuItem.Name = "unidad2ToolStripMenuItem";
             this.unidad2ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
@@ -196,9 +199,9 @@
             // 
             this.pnlContenido.Controls.Add(this.txtBienvenida);
             this.pnlContenido.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.pnlContenido.Location = new System.Drawing.Point(0, 85);
+            this.pnlContenido.Location = new System.Drawing.Point(0, 117);
             this.pnlContenido.Name = "pnlContenido";
-            this.pnlContenido.Size = new System.Drawing.Size(1166, 637);
+            this.pnlContenido.Size = new System.Drawing.Size(1166, 605);
             this.pnlContenido.TabIndex = 12;
             // 
             // txtBienvenida
@@ -224,6 +227,13 @@
             this.pnlstrip.Name = "pnlstrip";
             this.pnlstrip.Size = new System.Drawing.Size(1175, 41);
             this.pnlstrip.TabIndex = 13;
+            // 
+            // memoramaToolStripMenuItem
+            // 
+            this.memoramaToolStripMenuItem.Name = "memoramaToolStripMenuItem";
+            this.memoramaToolStripMenuItem.Size = new System.Drawing.Size(219, 36);
+            this.memoramaToolStripMenuItem.Text = "Memorama";
+            this.memoramaToolStripMenuItem.Click += new System.EventHandler(this.memoramaToolStripMenuItem_Click);
             // 
             // picCerrar
             // 
@@ -291,6 +301,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         public System.Windows.Forms.Panel pnlContenido;
         private System.Windows.Forms.Panel pnlstrip;
+        private System.Windows.Forms.ToolStripMenuItem memoramaToolStripMenuItem;
     }
 }
 
