@@ -75,6 +75,12 @@
     <Compile Include="frmMemorama.Designer.cs">
       <DependentUpon>frmMemorama.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPreguntarNombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPreguntarNombre.Designer.cs">
+      <DependentUpon>frmPreguntarNombre.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTiposDeDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMemorama.resx">
       <DependentUpon>frmMemorama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPreguntarNombre.resx">
+      <DependentUpon>frmPreguntarNombre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiposDeDatos.resx">
       <DependentUpon>frmTiposDeDatos.cs</DependentUpon>

@@ -112,10 +112,10 @@ namespace EstructuraDeDatos
             pnlContenido.Enabled = false;
             pnlContenido.Controls.Clear();
             pnlContenido.Enabled = true;
-            frmMemorama memo = new frmMemorama();
-            memo.TopLevel = false;
-            pnlContenido.Controls.Add(memo);
-            memo.Show();
+            frmPreguntarNombre nombrememo = new frmPreguntarNombre();
+            nombrememo.TopLevel = false;
+            pnlContenido.Controls.Add(nombrememo);
+            nombrememo.Show();
         }
     }
 }

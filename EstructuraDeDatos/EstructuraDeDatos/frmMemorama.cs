@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using  System.Threading;
 
 namespace EstructuraDeDatos
 {
     public partial class frmMemorama : Form
     {
+        private string nombre = frmPreguntarNombre.nombre;
         int[] cartas = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7 };
-
+        private bool estado = false;
+        private int indiceTemporal = 0;
+        private PictureBox picTemp = null;
         public frmMemorama()
         {
             InitializeComponent();
@@ -23,16 +27,14 @@ namespace EstructuraDeDatos
         {
             foreach (PictureBox pic in this.Controls.OfType<PictureBox>())
             {
-                
                 pic.Image = EstructuraDeDatos.Properties.Resources.reverso;
                 pic.Update();
             }
-            
         }
 
         private void flip (PictureBox pic, int entero)
         {
-            MessageBox.Show(cartas[entero].ToString());
+            //MessageBox.Show(cartas[entero].ToString());
             switch (cartas[entero])
             {
                 case 0: pic.Image = EstructuraDeDatos.Properties.Resources.n0;
@@ -51,6 +53,39 @@ namespace EstructuraDeDatos
                     break;
                 case 7: pic.Image = EstructuraDeDatos.Properties.Resources.n7;
                     break;
+                
+            }
+            pic.Update();
+
+            if (!estado)
+            {
+                estado = true;
+                indiceTemporal = entero;
+                picTemp = pic;
+                picTemp.Enabled = false;
+            }
+            else
+            {
+                if (cartas[entero] == cartas[indiceTemporal])
+                {
+                   // MessageBox.Show("El eliott si es amá");
+                    pic.Enabled = false;
+                    pic.Visible = false;
+                    picTemp.Enabled = false;
+                    picTemp.Visible = false;
+
+                }
+                else
+                {
+                    //  Console.WriteLine("Eran mentiras.");
+                    Thread.Sleep(1000);
+                    pic.Image = EstructuraDeDatos.Properties.Resources.reverso;
+                    picTemp.Image = EstructuraDeDatos.Properties.Resources.reverso;
+                    picTemp.Enabled = true;
+
+                }
+
+                estado = false;
             }
         }
        
@@ -58,20 +93,17 @@ namespace EstructuraDeDatos
         {
             cartas = cartas.OrderBy(s=>Guid.NewGuid()).ToArray();
             reset();
-            MessageBox.Show(string.Join(" - ", cartas));       
-
+           // MessageBox.Show(string.Join(" - ", cartas)); 
         }
 
         private void p0_Click(object sender, EventArgs e)
         {
             flip(p0, 0);
-            
         }
 
         private void p1_Click(object sender, EventArgs e)
         {
             flip(p1, 1);
-
         }
 
         private void p2_Click(object sender, EventArgs e)
