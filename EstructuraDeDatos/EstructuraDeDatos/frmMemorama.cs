@@ -18,6 +18,8 @@ namespace EstructuraDeDatos
         private bool estado = false;
         private int indiceTemporal = 0;
         private PictureBox picTemp = null;
+        private int tiempo = 0;
+
         public frmMemorama()
         {
             InitializeComponent();
@@ -174,6 +176,13 @@ namespace EstructuraDeDatos
         private void p15_Click(object sender, EventArgs e)
         {
             flip(p15, 15);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tiempo++;
+
+
         }
     }
 }

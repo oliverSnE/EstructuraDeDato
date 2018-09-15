@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlContenido = new System.Windows.Forms.Panel();
             this.btnJugar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblTiempo = new System.Windows.Forms.Label();
+            this.lblPlayer = new System.Windows.Forms.Label();
             this.pnlContenido.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,9 +44,9 @@
             this.pnlContenido.Controls.Add(this.btnJugar);
             this.pnlContenido.Controls.Add(this.txtNombre);
             this.pnlContenido.Controls.Add(this.lblNombre);
-            this.pnlContenido.Location = new System.Drawing.Point(13, 13);
+            this.pnlContenido.Location = new System.Drawing.Point(13, 46);
             this.pnlContenido.Name = "pnlContenido";
-            this.pnlContenido.Size = new System.Drawing.Size(720, 430);
+            this.pnlContenido.Size = new System.Drawing.Size(720, 397);
             this.pnlContenido.TabIndex = 0;
             // 
             // btnJugar
@@ -75,12 +79,38 @@
             this.lblNombre.TabIndex = 16;
             this.lblNombre.Text = "¿Cuál es tu nombre?";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblTiempo
+            // 
+            this.lblTiempo.AutoSize = true;
+            this.lblTiempo.Location = new System.Drawing.Point(338, 9);
+            this.lblTiempo.Name = "lblTiempo";
+            this.lblTiempo.Size = new System.Drawing.Size(93, 32);
+            this.lblTiempo.TabIndex = 1;
+            this.lblTiempo.Text = "label1";
+            // 
+            // lblPlayer
+            // 
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Location = new System.Drawing.Point(198, 9);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(93, 32);
+            this.lblPlayer.TabIndex = 2;
+            this.lblPlayer.Text = "label1";
+            // 
             // frmPreguntarNombre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(738, 440);
+            this.Controls.Add(this.lblPlayer);
+            this.Controls.Add(this.lblTiempo);
             this.Controls.Add(this.pnlContenido);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -93,6 +123,7 @@
             this.pnlContenido.ResumeLayout(false);
             this.pnlContenido.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -102,5 +133,8 @@
         private System.Windows.Forms.Button btnJugar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblTiempo;
+        private System.Windows.Forms.Label lblPlayer;
     }
 }

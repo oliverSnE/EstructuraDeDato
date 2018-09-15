@@ -14,6 +14,7 @@ namespace EstructuraDeDatos
     public partial class frmPreguntarNombre : Form
     {
         public static string nombre;
+        private int tiempo = 0;
         public frmPreguntarNombre()
         {
             InitializeComponent();
@@ -21,9 +22,9 @@ namespace EstructuraDeDatos
 
         private void frmPreguntarNombre_Load(object sender, EventArgs e)
         {
-            pnlContenido.Location = new Point(1,1);
+            pnlContenido.Location = new Point(1,20);
             pnlContenido.Width = this.Width;
-            pnlContenido.Height = this.Height;
+            pnlContenido.Height = this.Height-20;
             pnlContenido.Enabled = false;
             pnlContenido.Controls.Clear();
             pnlContenido.Enabled = true;
@@ -40,7 +41,7 @@ namespace EstructuraDeDatos
 
         private void btnJugar_Click_1(object sender, EventArgs e)
         {
-            nombre = txtNombre.Text;
+           lblPlayer.Text = txtNombre.Text;
             pnlContenido.Enabled = false;
             pnlContenido.Controls.Clear();
             pnlContenido.Enabled = true;
@@ -48,6 +49,13 @@ namespace EstructuraDeDatos
             memorama.TopLevel = false;
             pnlContenido.Controls.Add(memorama);
             memorama.Show();
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tiempo++;
+            lblTiempo.Text = tiempo.ToString();
 
         }
     }
