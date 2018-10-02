@@ -12,7 +12,7 @@ namespace EstructuraDeDatos
 {
     public partial class frmBusquedaBinaria : Form
     {
-        int[] valores;
+        public int[] valores;
         public frmBusquedaBinaria()
         {
             InitializeComponent();
@@ -45,7 +45,7 @@ namespace EstructuraDeDatos
 
         private void btnRandom_Click(object sender, EventArgs e)
         {
-            dgvBusqueda.Rows.Clear();
+            //dgvBusqueda.Rows.Clear();
             Random r = new Random();
 
             valores = new int[int.Parse(txtElemento.Text)];
@@ -53,9 +53,10 @@ namespace EstructuraDeDatos
             for (int i = 0; i < int.Parse(txtElemento.Text); i++)
             {
                 valores[i] = r.Next(0, Convert.ToInt32(txtLimite.Text));
-              //dgvBusqueda.Rows.Add(r.Next(0, Convert.ToInt32(txtLimite.Text)).ToString());
+                //dgvBusqueda.Rows.Add(r.Next(0, Convert.ToInt32(txtLimite.Text)).ToString());
 
             }
+            Array.Sort(valores);
             dgvBusqueda.DataSource = valores.Select(x => new { Elementos = x }).ToList();
             setRowNumber(dgvBusqueda);
         }
@@ -134,11 +135,23 @@ namespace EstructuraDeDatos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //busqueda();
+            if (txtBuscar.Text.Length <= 0)
+            {
+                errorProvider.SetError(txtBuscar,"El campo no puede esta vacío.");
+            }
+            else
+            {
+               lblEncontrado.Text = Convert.ToString(busqueda(valores, Convert.ToInt32(txtBuscar.Text)));
+                
+                 errorProvider.SetError(txtBuscar,"");
+            }
+            
         }
 
         public static object busqueda(int[] num, int key)
         {
+            
+            
             int minimo = 0;
             int maximo = num.Length - 1;
             while (minimo <= maximo)
@@ -147,7 +160,7 @@ namespace EstructuraDeDatos
                 if (key == num [mitad])
                 {
                     ++mitad;
-                    return "Está en la posición " + mitad;
+                    return "Está en la posición: " + mitad;
 
                 }
                 else if (key < num [mitad])

@@ -41,20 +41,20 @@
             this.pruebaDeFibonacciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fractalDeHilbertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.memoramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.pnlContenido = new System.Windows.Forms.Panel();
             this.txtBienvenida = new System.Windows.Forms.TextBox();
             this.pnlstrip = new System.Windows.Forms.Panel();
-            this.memoramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.msMenu.SuspendLayout();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.pnlContenido.SuspendLayout();
             this.pnlstrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // msMenu
@@ -148,12 +148,14 @@
             this.pruebaDeFibonacciToolStripMenuItem.Name = "pruebaDeFibonacciToolStripMenuItem";
             this.pruebaDeFibonacciToolStripMenuItem.Size = new System.Drawing.Size(311, 36);
             this.pruebaDeFibonacciToolStripMenuItem.Text = "Prueba de Fibonacci";
+            this.pruebaDeFibonacciToolStripMenuItem.Click += new System.EventHandler(this.pruebaDeFibonacciToolStripMenuItem_Click);
             // 
             // fractalDeHilbertToolStripMenuItem
             // 
             this.fractalDeHilbertToolStripMenuItem.Name = "fractalDeHilbertToolStripMenuItem";
             this.fractalDeHilbertToolStripMenuItem.Size = new System.Drawing.Size(311, 36);
             this.fractalDeHilbertToolStripMenuItem.Text = "Fractal de Hilbert";
+            this.fractalDeHilbertToolStripMenuItem.Click += new System.EventHandler(this.fractalDeHilbertToolStripMenuItem_Click);
             // 
             // unidad2ToolStripMenuItem
             // 
@@ -163,6 +165,13 @@
             this.unidad2ToolStripMenuItem.Name = "unidad2ToolStripMenuItem";
             this.unidad2ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
             this.unidad2ToolStripMenuItem.Text = "Unidad 2";
+            // 
+            // memoramaToolStripMenuItem
+            // 
+            this.memoramaToolStripMenuItem.Name = "memoramaToolStripMenuItem";
+            this.memoramaToolStripMenuItem.Size = new System.Drawing.Size(219, 36);
+            this.memoramaToolStripMenuItem.Text = "Memorama";
+            this.memoramaToolStripMenuItem.Click += new System.EventHandler(this.memoramaToolStripMenuItem_Click);
             // 
             // unidad3ToolStripMenuItem
             // 
@@ -195,6 +204,18 @@
             this.pnlMenu.Size = new System.Drawing.Size(1178, 38);
             this.pnlMenu.TabIndex = 11;
             // 
+            // picCerrar
+            // 
+            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
+            this.picCerrar.Location = new System.Drawing.Point(1140, 3);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(26, 26);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picCerrar.TabIndex = 0;
+            this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
+            // 
             // pnlContenido
             // 
             this.pnlContenido.Controls.Add(this.txtBienvenida);
@@ -206,7 +227,7 @@
             // 
             // txtBienvenida
             // 
-            this.txtBienvenida.BackColor = System.Drawing.Color.SlateGray;
+            this.txtBienvenida.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtBienvenida.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBienvenida.Font = new System.Drawing.Font("Consolas", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBienvenida.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -228,31 +249,12 @@
             this.pnlstrip.Size = new System.Drawing.Size(1175, 41);
             this.pnlstrip.TabIndex = 13;
             // 
-            // memoramaToolStripMenuItem
-            // 
-            this.memoramaToolStripMenuItem.Name = "memoramaToolStripMenuItem";
-            this.memoramaToolStripMenuItem.Size = new System.Drawing.Size(219, 36);
-            this.memoramaToolStripMenuItem.Text = "Memorama";
-            this.memoramaToolStripMenuItem.Click += new System.EventHandler(this.memoramaToolStripMenuItem_Click);
-            // 
-            // picCerrar
-            // 
-            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
-            this.picCerrar.Location = new System.Drawing.Point(1140, 3);
-            this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(26, 26);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picCerrar.TabIndex = 0;
-            this.picCerrar.TabStop = false;
-            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.SlateGray;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1178, 749);
             this.Controls.Add(this.pnlstrip);
             this.Controls.Add(this.pnlContenido);
@@ -270,11 +272,11 @@
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.pnlContenido.ResumeLayout(false);
             this.pnlContenido.PerformLayout();
             this.pnlstrip.ResumeLayout(false);
             this.pnlstrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }

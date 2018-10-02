@@ -33,7 +33,6 @@ namespace EstructuraDeDatos
           
             for (int i = 0; i < int.Parse(txtLimite.Text); i++)
             {
-                               
                 if (fn == 1)
                 {
                     dgvFibonacci.Rows.Add(fn.ToString());
@@ -50,12 +49,8 @@ namespace EstructuraDeDatos
                 if (fn <= int.Parse(txtLimite.Text))
                 {
                     dgvFibonacci.Rows.Add(fn.ToString());
-
                 }
-                 
-
             }
-
         }
 
         private void txtLimite_KeyPress(object sender, KeyPressEventArgs e)
@@ -73,6 +68,11 @@ namespace EstructuraDeDatos
         }
 
         private void pnlTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvFibonacci_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

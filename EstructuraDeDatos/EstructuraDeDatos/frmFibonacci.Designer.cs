@@ -38,15 +38,15 @@
             this.txtLimite = new System.Windows.Forms.TextBox();
             this.pbFibonacci = new System.Windows.Forms.PictureBox();
             this.pnlContenido = new System.Windows.Forms.Panel();
-            this.picFibonacci = new System.Windows.Forms.PictureBox();
-            this.lblFig = new System.Windows.Forms.Label();
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.lblFig = new System.Windows.Forms.Label();
+            this.picFibonacci = new System.Windows.Forms.PictureBox();
             this.pnlControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFibonacci)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFibonacci)).BeginInit();
             this.pnlContenido.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFibonacci)).BeginInit();
             this.pnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFibonacci)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlControl
@@ -83,6 +83,7 @@
             this.dgvFibonacci.Size = new System.Drawing.Size(262, 535);
             this.dgvFibonacci.TabIndex = 15;
             this.dgvFibonacci.Visible = false;
+            this.dgvFibonacci.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFibonacci_CellContentClick);
             // 
             // Column1
             // 
@@ -144,15 +145,15 @@
             this.pnlContenido.Size = new System.Drawing.Size(753, 620);
             this.pnlContenido.TabIndex = 12;
             // 
-            // picFibonacci
+            // pnlTitulo
             // 
-            this.picFibonacci.Image = ((System.Drawing.Image)(resources.GetObject("picFibonacci.Image")));
-            this.picFibonacci.Location = new System.Drawing.Point(-1, 40);
-            this.picFibonacci.Name = "picFibonacci";
-            this.picFibonacci.Size = new System.Drawing.Size(750, 259);
-            this.picFibonacci.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picFibonacci.TabIndex = 0;
-            this.picFibonacci.TabStop = false;
+            this.pnlTitulo.Controls.Add(this.lblFig);
+            this.pnlTitulo.Controls.Add(this.picFibonacci);
+            this.pnlTitulo.Location = new System.Drawing.Point(0, 3);
+            this.pnlTitulo.Name = "pnlTitulo";
+            this.pnlTitulo.Size = new System.Drawing.Size(753, 620);
+            this.pnlTitulo.TabIndex = 12;
+            this.pnlTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitulo_Paint);
             // 
             // lblFig
             // 
@@ -165,15 +166,15 @@
             this.lblFig.TabIndex = 13;
             this.lblFig.Text = "Figura de Fibonacci";
             // 
-            // pnlTitulo
+            // picFibonacci
             // 
-            this.pnlTitulo.Controls.Add(this.lblFig);
-            this.pnlTitulo.Controls.Add(this.picFibonacci);
-            this.pnlTitulo.Location = new System.Drawing.Point(0, 3);
-            this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(753, 620);
-            this.pnlTitulo.TabIndex = 12;
-            this.pnlTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitulo_Paint);
+            this.picFibonacci.Image = ((System.Drawing.Image)(resources.GetObject("picFibonacci.Image")));
+            this.picFibonacci.Location = new System.Drawing.Point(-1, 40);
+            this.picFibonacci.Name = "picFibonacci";
+            this.picFibonacci.Size = new System.Drawing.Size(750, 259);
+            this.picFibonacci.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picFibonacci.TabIndex = 0;
+            this.picFibonacci.TabStop = false;
             // 
             // frmFibonacci
             // 
@@ -196,9 +197,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFibonacci)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFibonacci)).EndInit();
             this.pnlContenido.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picFibonacci)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFibonacci)).EndInit();
             this.ResumeLayout(false);
 
         }

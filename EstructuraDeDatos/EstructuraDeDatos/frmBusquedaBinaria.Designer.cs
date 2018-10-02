@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBusquedaBinaria));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtElemento = new System.Windows.Forms.TextBox();
             this.lblNumElemento = new System.Windows.Forms.Label();
             this.gbBinario = new System.Windows.Forms.GroupBox();
@@ -44,10 +45,12 @@
             this.btnRandom = new System.Windows.Forms.Button();
             this.lblLimite = new System.Windows.Forms.Label();
             this.txtLimite = new System.Windows.Forms.TextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbBinario.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // txtElemento
@@ -64,7 +67,7 @@
             // lblNumElemento
             // 
             this.lblNumElemento.AutoSize = true;
-            this.lblNumElemento.Location = new System.Drawing.Point(6, 49);
+            this.lblNumElemento.Location = new System.Drawing.Point(53, 52);
             this.lblNumElemento.Name = "lblNumElemento";
             this.lblNumElemento.Size = new System.Drawing.Size(301, 32);
             this.lblNumElemento.TabIndex = 3;
@@ -98,7 +101,7 @@
             // lblEncontrado
             // 
             this.lblEncontrado.AutoSize = true;
-            this.lblEncontrado.Location = new System.Drawing.Point(757, 542);
+            this.lblEncontrado.Location = new System.Drawing.Point(726, 524);
             this.lblEncontrado.Name = "lblEncontrado";
             this.lblEncontrado.Size = new System.Drawing.Size(161, 32);
             this.lblEncontrado.TabIndex = 29;
@@ -142,16 +145,16 @@
             this.dgvBusqueda.Location = new System.Drawing.Point(707, 49);
             this.dgvBusqueda.Name = "dgvBusqueda";
             this.dgvBusqueda.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBusqueda.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBusqueda.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBusqueda.RowHeadersWidth = 65;
             this.dgvBusqueda.RowTemplate.Height = 24;
             this.dgvBusqueda.Size = new System.Drawing.Size(240, 472);
@@ -223,6 +226,10 @@
             this.txtLimite.TextChanged += new System.EventHandler(this.txtLimite_TextChanged);
             this.txtLimite.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLimite_KeyPress);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmBusquedaBinaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -244,6 +251,7 @@
             this.pnlInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,5 +272,6 @@
         private System.Windows.Forms.TextBox txtInfo;
         private System.Windows.Forms.PictureBox picInfo;
         private System.Windows.Forms.Label lblEncontrado;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

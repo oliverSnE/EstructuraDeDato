@@ -63,6 +63,12 @@
     <Compile Include="frmFibonacci.Designer.cs">
       <DependentUpon>frmFibonacci.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFractalHilbert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFractalHilbert.Designer.cs">
+      <DependentUpon>frmFractalHilbert.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMcd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="frmPreguntarNombre.Designer.cs">
       <DependentUpon>frmPreguntarNombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPruebaDeFibonacci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPruebaDeFibonacci.Designer.cs">
+      <DependentUpon>frmPruebaDeFibonacci.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTiposDeDatos.cs">
       <SubType>Form</SubType>
@@ -105,6 +117,9 @@
     <EmbeddedResource Include="frmFibonacci.resx">
       <DependentUpon>frmFibonacci.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFractalHilbert.resx">
+      <DependentUpon>frmFractalHilbert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMcd.resx">
       <DependentUpon>frmMcd.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPreguntarNombre.resx">
       <DependentUpon>frmPreguntarNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPruebaDeFibonacci.resx">
+      <DependentUpon>frmPruebaDeFibonacci.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiposDeDatos.resx">
       <DependentUpon>frmTiposDeDatos.cs</DependentUpon>
@@ -175,6 +193,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\Naruto\nf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\nr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Naruto\nr3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

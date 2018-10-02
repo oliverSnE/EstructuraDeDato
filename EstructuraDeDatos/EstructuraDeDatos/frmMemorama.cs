@@ -16,9 +16,17 @@ namespace EstructuraDeDatos
         private string nombre = frmPreguntarNombre.nombre;
         int[] cartas = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7 };
         private bool estado = false;
+        Random imRandom;
+
+        private Image[] fondo = 
+        {
+            EstructuraDeDatos.Properties.Resources.nr2, EstructuraDeDatos.Properties.Resources.reverso,
+            EstructuraDeDatos.Properties.Resources.nr3
+        };
         private int indiceTemporal = 0;
         private PictureBox picTemp = null;
-        private int tiempo = 0;
+        
+        public static int count = 0;
 
         public frmMemorama()
         {
@@ -32,6 +40,8 @@ namespace EstructuraDeDatos
                 pic.Image = EstructuraDeDatos.Properties.Resources.reverso;
                 pic.Update();
             }
+
+            count = 0;
         }
 
         private void flip (PictureBox pic, int entero)
@@ -55,7 +65,6 @@ namespace EstructuraDeDatos
                     break;
                 case 7: pic.Image = EstructuraDeDatos.Properties.Resources.n7;
                     break;
-                
             }
             pic.Update();
 
@@ -65,16 +74,42 @@ namespace EstructuraDeDatos
                 indiceTemporal = entero;
                 picTemp = pic;
                 picTemp.Enabled = false;
+              
             }
             else
             {
                 if (cartas[entero] == cartas[indiceTemporal])
                 {
+                    int cont2 = 0;
                    // MessageBox.Show("El eliott si es amá");
                     pic.Enabled = false;
                     pic.Visible = false;
                     picTemp.Enabled = false;
                     picTemp.Visible = false;
+                    if (count > 8)
+                    {
+                        if (cont2 <= 10)
+                        {
+                            MessageBox.Show("Baia, baia parece que tenemos un muy buen soldado. Felicidades soldado: " +
+                                            nombre + ". Lograste resolverlo en: " + count + "intentos.", MessageBoxIcon.Information.ToString());
+                        }
+                        else if (cont2 > 10 && cont2 <= 15)
+                        {
+                            MessageBox.Show("No está mal soldado: " + nombre + ". Lograste resolverlo en: " + count + "intentos.", MessageBoxIcon.Information.ToString());
+                        }
+                        else if (cont2 > 15 && cont2 < 21)
+                        {
+                            MessageBox.Show("Necesita practicar más soldado: " + nombre + ". Lograste resolverlo en: " + count + "intentos.", MessageBoxIcon.Information.ToString());
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vuelva a casa soldado: " + nombre + ". Usted no tiene nada que hacer aquí. Lograste resolverlo en: " + count + "intentos.", MessageBoxIcon.Information.ToString());
+                        }
+                    }
+
+                    cont2++;
+
+                    //MessageBox.Show(count+"");
 
                 }
                 else
@@ -84,7 +119,8 @@ namespace EstructuraDeDatos
                     pic.Image = EstructuraDeDatos.Properties.Resources.reverso;
                     picTemp.Image = EstructuraDeDatos.Properties.Resources.reverso;
                     picTemp.Enabled = true;
-
+                    count++;
+                    //MessageBox.Show(count + "");
                 }
 
                 estado = false;
@@ -93,7 +129,11 @@ namespace EstructuraDeDatos
        
         private void frmMemorama_Load(object sender, EventArgs e)
         {
+            
             cartas = cartas.OrderBy(s=>Guid.NewGuid()).ToArray();
+
+            // fondo = fondo.OrderBy(s => Guid.NewGuid()).ToArray();
+            //MessageBox.Show(fondo.ToString());
             reset();
            // MessageBox.Show(string.Join(" - ", cartas)); 
         }
@@ -180,7 +220,7 @@ namespace EstructuraDeDatos
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            tiempo++;
+            
 
 
         }

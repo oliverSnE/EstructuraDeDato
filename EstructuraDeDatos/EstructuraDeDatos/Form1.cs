@@ -117,5 +117,27 @@ namespace EstructuraDeDatos
             pnlContenido.Controls.Add(nombrememo);
             nombrememo.Show();
         }
+
+        private void pruebaDeFibonacciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContenido.Enabled = false;
+            pnlContenido.Controls.Clear();
+            pnlContenido.Enabled = true;
+            frmPruebaDeFibonacci pf = new frmPruebaDeFibonacci();
+            pf.TopLevel = false;
+            pnlContenido.Controls.Add(pf);
+            pf.Show();
+        }
+
+        private void fractalDeHilbertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContenido.Enabled = false;
+            pnlContenido.Controls.Clear();
+            pnlContenido.Enabled = true;
+            frmFractalHilbert fractal = new frmFractalHilbert();
+            fractal.TopLevel = false;
+            pnlContenido.Controls.Add(fractal);
+            fractal.Show();
+        }
     }
 }

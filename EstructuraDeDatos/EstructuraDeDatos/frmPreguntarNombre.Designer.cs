@@ -36,6 +36,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTiempo = new System.Windows.Forms.Label();
             this.lblPlayer = new System.Windows.Forms.Label();
+            this.lblIntentos = new System.Windows.Forms.Label();
+            this.lblNumIntento = new System.Windows.Forms.Label();
             this.pnlContenido.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,19 +105,39 @@
             this.lblPlayer.TabIndex = 2;
             this.lblPlayer.Text = "label1";
             // 
+            // lblIntentos
+            // 
+            this.lblIntentos.AutoSize = true;
+            this.lblIntentos.Location = new System.Drawing.Point(25, 9);
+            this.lblIntentos.Name = "lblIntentos";
+            this.lblIntentos.Size = new System.Drawing.Size(277, 32);
+            this.lblIntentos.TabIndex = 3;
+            this.lblIntentos.Text = "Número de intentos: ";
+            // 
+            // lblNumIntento
+            // 
+            this.lblNumIntento.AutoSize = true;
+            this.lblNumIntento.Location = new System.Drawing.Point(297, 9);
+            this.lblNumIntento.Name = "lblNumIntento";
+            this.lblNumIntento.Size = new System.Drawing.Size(277, 32);
+            this.lblNumIntento.TabIndex = 4;
+            this.lblNumIntento.Text = "Número de intentos: ";
+            // 
             // frmPreguntarNombre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(738, 440);
+            this.Controls.Add(this.lblNumIntento);
+            this.Controls.Add(this.lblIntentos);
             this.Controls.Add(this.lblPlayer);
             this.Controls.Add(this.lblTiempo);
             this.Controls.Add(this.pnlContenido);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmPreguntarNombre";
             this.Text = "frmPreguntarNombre";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -136,5 +158,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblTiempo;
         private System.Windows.Forms.Label lblPlayer;
+        private System.Windows.Forms.Label lblIntentos;
+        private System.Windows.Forms.Label lblNumIntento;
     }
 }

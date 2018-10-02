@@ -19,9 +19,7 @@ namespace EstructuraDeDatos
 
         private void frmTiposDeDatos_Load(object sender, EventArgs e)
         {
-            gbTipo.Location = new Point(1,1);
-           
-
+            gbTipo.Location = new Point(1, 1);
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
@@ -47,10 +45,6 @@ namespace EstructuraDeDatos
             pnlContenido.Width = this.Width -1;
             pnlContenido.Height = this.Height - 1;
             TDD2.Show();
-            
-            
-            
-            
         }
     }
 }

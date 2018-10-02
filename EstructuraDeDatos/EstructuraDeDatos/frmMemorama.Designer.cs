@@ -69,7 +69,7 @@
             // 
             // tcontenido
             // 
-            this.tcontenido.BackgroundImage = global::EstructuraDeDatos.Properties.Resources.nf;
+            this.tcontenido.BackgroundImage = global::EstructuraDeDatos.Properties.Resources.nr3;
             this.tcontenido.ColumnCount = 8;
             this.tcontenido.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tcontenido.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
