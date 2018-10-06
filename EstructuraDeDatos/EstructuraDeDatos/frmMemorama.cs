@@ -17,6 +17,7 @@ namespace EstructuraDeDatos
         int[] cartas = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7 };
         private bool estado = false;
         Random imRandom;
+        public static int count = 0;
 
         private Image[] fondo = 
         {
@@ -26,8 +27,6 @@ namespace EstructuraDeDatos
         private int indiceTemporal = 0;
         private PictureBox picTemp = null;
         
-        public static int count = 0;
-
         public frmMemorama()
         {
             InitializeComponent();
@@ -80,34 +79,13 @@ namespace EstructuraDeDatos
             {
                 if (cartas[entero] == cartas[indiceTemporal])
                 {
-                    int cont2 = 0;
+                   
                    // MessageBox.Show("El eliott si es amá");
                     pic.Enabled = false;
                     pic.Visible = false;
                     picTemp.Enabled = false;
                     picTemp.Visible = false;
-                    if (count > 8)
-                    {
-                        if (cont2 <= 10)
-                        {
-                            MessageBox.Show("Baia, baia parece que tenemos un muy buen soldado. Felicidades soldado: " +
-                                            nombre + ". Lograste resolverlo en: " + count + "intentos.", MessageBoxIcon.Information.ToString());
-                        }
-                        else if (cont2 > 10 && cont2 <= 15)
-                        {
-                            MessageBox.Show("No está mal soldado: " + nombre + ". Lograste resolverlo en: " + count + "intentos.", MessageBoxIcon.Information.ToString());
-                        }
-                        else if (cont2 > 15 && cont2 < 21)
-                        {
-                            MessageBox.Show("Necesita practicar más soldado: " + nombre + ". Lograste resolverlo en: " + count + "intentos.", MessageBoxIcon.Information.ToString());
-                        }
-                        else
-                        {
-                            MessageBox.Show("Vuelva a casa soldado: " + nombre + ". Usted no tiene nada que hacer aquí. Lograste resolverlo en: " + count + "intentos.", MessageBoxIcon.Information.ToString());
-                        }
-                    }
-
-                    cont2++;
+                    count++;
 
                     //MessageBox.Show(count+"");
 
@@ -141,6 +119,7 @@ namespace EstructuraDeDatos
         private void p0_Click(object sender, EventArgs e)
         {
             flip(p0, 0);
+            
         }
 
         private void p1_Click(object sender, EventArgs e)
@@ -151,71 +130,85 @@ namespace EstructuraDeDatos
         private void p2_Click(object sender, EventArgs e)
         {
             flip(p2, 2);
+            
         }
 
         private void p3_Click(object sender, EventArgs e)
         {
             flip(p3, 3);
+            
         }
 
         private void p4_Click(object sender, EventArgs e)
         {
             flip(p4, 4);
+            
         }
 
         private void p5_Click(object sender, EventArgs e)
         {
             flip(p5, 5);
+            
         }
 
         private void p6_Click(object sender, EventArgs e)
         {
             flip(p6, 6);
+            
         }
 
         private void p7_Click(object sender, EventArgs e)
         {
             flip(p7, 7);
+           
         }
 
         private void p8_Click(object sender, EventArgs e)
         {
             flip(p8, 8);
+            
         }
 
         private void p9_Click(object sender, EventArgs e)
         {
             flip(p9, 9);
+            
         }
 
         private void p10_Click(object sender, EventArgs e)
         {
             flip(p10, 10);
+            
         }
 
         private void p11_Click(object sender, EventArgs e)
         {
             flip(p11, 11);
+            
         }
 
         private void p12_Click(object sender, EventArgs e)
         {
             flip(p12, 12);
+           
         }
 
         private void p13_Click(object sender, EventArgs e)
         {
             flip(p13, 13);
+            
         }
 
         private void p14_Click(object sender, EventArgs e)
         {
             flip(p14, 14);
+            
         }
 
         private void p15_Click(object sender, EventArgs e)
         {
             flip(p15, 15);
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

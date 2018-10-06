@@ -139,5 +139,26 @@ namespace EstructuraDeDatos
             pnlContenido.Controls.Add(fractal);
             fractal.Show();
         }
+
+        private void unidad4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void msMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void sumaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContenido.Enabled = false;
+            pnlContenido.Controls.Clear();
+            pnlContenido.Enabled = true;
+            frmSumaDeMatrices suma = new frmSumaDeMatrices();
+            suma.TopLevel = false;
+            pnlContenido.Controls.Add(suma);
+            suma.Show();
+        }
     }
 }

@@ -50,6 +50,11 @@
             this.pnlContenido = new System.Windows.Forms.Panel();
             this.txtBienvenida = new System.Windows.Forms.TextBox();
             this.pnlstrip = new System.Windows.Forms.Panel();
+            this.métodoDeOrdenamientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sumaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inversaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transpuestaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuadradoMágicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
@@ -75,6 +80,7 @@
             this.msMenu.Size = new System.Drawing.Size(1175, 40);
             this.msMenu.TabIndex = 1;
             this.msMenu.Text = "menuStrip1";
+            this.msMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.msMenu_ItemClicked);
             // 
             // unidad5ToolStripMenuItem
             // 
@@ -92,8 +98,8 @@
             this.recursividadToolStripMenuItem});
             this.unidad1ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidad1ToolStripMenuItem.Name = "unidad1ToolStripMenuItem";
-            this.unidad1ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
-            this.unidad1ToolStripMenuItem.Text = "Unidad 1";
+            this.unidad1ToolStripMenuItem.Size = new System.Drawing.Size(135, 36);
+            this.unidad1ToolStripMenuItem.Text = "Unidad 1: ";
             // 
             // tiposDeDatosAbstractosToolStripMenuItem
             // 
@@ -160,16 +166,21 @@
             // unidad2ToolStripMenuItem
             // 
             this.unidad2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.métodoDeOrdenamientoToolStripMenuItem,
+            this.sumaToolStripMenuItem,
+            this.inversaToolStripMenuItem,
+            this.transpuestaToolStripMenuItem,
+            this.cuadradoMágicoToolStripMenuItem,
             this.memoramaToolStripMenuItem});
             this.unidad2ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidad2ToolStripMenuItem.Name = "unidad2ToolStripMenuItem";
-            this.unidad2ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
-            this.unidad2ToolStripMenuItem.Text = "Unidad 2";
+            this.unidad2ToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
+            this.unidad2ToolStripMenuItem.Text = "Unidad 2:";
             // 
             // memoramaToolStripMenuItem
             // 
             this.memoramaToolStripMenuItem.Name = "memoramaToolStripMenuItem";
-            this.memoramaToolStripMenuItem.Size = new System.Drawing.Size(219, 36);
+            this.memoramaToolStripMenuItem.Size = new System.Drawing.Size(373, 36);
             this.memoramaToolStripMenuItem.Text = "Memorama";
             this.memoramaToolStripMenuItem.Click += new System.EventHandler(this.memoramaToolStripMenuItem_Click);
             // 
@@ -177,15 +188,16 @@
             // 
             this.unidad3ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidad3ToolStripMenuItem.Name = "unidad3ToolStripMenuItem";
-            this.unidad3ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
-            this.unidad3ToolStripMenuItem.Text = "Unidad 3";
+            this.unidad3ToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
+            this.unidad3ToolStripMenuItem.Text = "Unidad 3:";
             // 
             // unidad4ToolStripMenuItem
             // 
             this.unidad4ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidad4ToolStripMenuItem.Name = "unidad4ToolStripMenuItem";
-            this.unidad4ToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
-            this.unidad4ToolStripMenuItem.Text = "Unidad 4";
+            this.unidad4ToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
+            this.unidad4ToolStripMenuItem.Text = "Unidad 4:";
+            this.unidad4ToolStripMenuItem.Click += new System.EventHandler(this.unidad4ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -249,6 +261,37 @@
             this.pnlstrip.Size = new System.Drawing.Size(1175, 41);
             this.pnlstrip.TabIndex = 13;
             // 
+            // métodoDeOrdenamientoToolStripMenuItem
+            // 
+            this.métodoDeOrdenamientoToolStripMenuItem.Name = "métodoDeOrdenamientoToolStripMenuItem";
+            this.métodoDeOrdenamientoToolStripMenuItem.Size = new System.Drawing.Size(373, 36);
+            this.métodoDeOrdenamientoToolStripMenuItem.Text = "Método de ordenamiento";
+            // 
+            // sumaToolStripMenuItem
+            // 
+            this.sumaToolStripMenuItem.Name = "sumaToolStripMenuItem";
+            this.sumaToolStripMenuItem.Size = new System.Drawing.Size(373, 36);
+            this.sumaToolStripMenuItem.Text = "Suma";
+            this.sumaToolStripMenuItem.Click += new System.EventHandler(this.sumaToolStripMenuItem_Click);
+            // 
+            // inversaToolStripMenuItem
+            // 
+            this.inversaToolStripMenuItem.Name = "inversaToolStripMenuItem";
+            this.inversaToolStripMenuItem.Size = new System.Drawing.Size(373, 36);
+            this.inversaToolStripMenuItem.Text = "Inversa";
+            // 
+            // transpuestaToolStripMenuItem
+            // 
+            this.transpuestaToolStripMenuItem.Name = "transpuestaToolStripMenuItem";
+            this.transpuestaToolStripMenuItem.Size = new System.Drawing.Size(373, 36);
+            this.transpuestaToolStripMenuItem.Text = "Transpuesta";
+            // 
+            // cuadradoMágicoToolStripMenuItem
+            // 
+            this.cuadradoMágicoToolStripMenuItem.Name = "cuadradoMágicoToolStripMenuItem";
+            this.cuadradoMágicoToolStripMenuItem.Size = new System.Drawing.Size(373, 36);
+            this.cuadradoMágicoToolStripMenuItem.Text = "Cuadrado mágico";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -304,6 +347,11 @@
         public System.Windows.Forms.Panel pnlContenido;
         private System.Windows.Forms.Panel pnlstrip;
         private System.Windows.Forms.ToolStripMenuItem memoramaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem métodoDeOrdenamientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sumaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inversaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transpuestaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuadradoMágicoToolStripMenuItem;
     }
 }
 
